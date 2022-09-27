@@ -1,17 +1,74 @@
+:root {
+
+    /* Text colors */ 
+        --mainTextColor : #eee;
+        --secondTextColor : #333;
+        --importantElementColor : #F5B95F;
+    
+    /* Quizz buttons color */ 
+        --quizzTrueColor : #F5B95F;
+        --quizzFalseColor: #DC6363;
+    
+    }
+
+
 * {
-    font-family: 'Poppins', Verdana, sans-serif;;
+    font-family: 'Poppins', Verdana, sans-serif;
 }
 
-element {
-
-/* Text colors */ 
-    --mainTextColor : #eee;
-    --secondTextColor : #333;
-    --importantElementColor : #F5B95F;
-
-/* Quizz buttons color */ 
-    --quizzTrueColor : #F5B95F;
-    --quizzFalseColor: #DC6363;
-
+body {
+    margin:0;
+    padding:0;
 }
 
+
+
+
+/* FOOTER */
+
+footer {
+    color: var(--mainTextColor);
+    background-color: #1E273B;
+}
+
+h3, .wildersPresentation, ul {
+    text-align: center;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+}
+
+h3 {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    color : var(--importantElementColor);
+}
+
+footer > ul {
+    margin:0;
+    padding:0;
+    padding-bottom: 2vh;
+    display: grid;
+    
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 1rem;
+}
+
+footer > ul > li {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+
+.wilder {
+    all:unset;
+    cursor:pointer;
+}
+
+.name {
+    font-size: 0.8em;
+    color: var(--importantElementColor);
+}
