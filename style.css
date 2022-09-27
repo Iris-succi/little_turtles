@@ -1,0 +1,17 @@
+* {
+    font-family: 'Poppins', Verdana, sans-serif;;
+}
+
+element {
+
+/* Text colors */ 
+    --mainTextColor : #eee;
+    --secondTextColor : #333;
+    --importantElementColor : #F5B95F;
+
+/* Quizz buttons color */ 
+    --quizzTrueColor : #F5B95F;
+    --quizzFalseColor: #DC6363;
+
+}
+
