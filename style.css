@@ -13,7 +13,9 @@
 
 
 * {
+    box-sizing: border-box;
     font-family: 'Poppins', Verdana, sans-serif;
+
    
 }
 
@@ -24,10 +26,59 @@ body {
     background: linear-gradient(0deg, rgba(30,39,58,1) 17%, rgba(45,58,88,1) 52%, rgba(47,85,125,1) 100%);
 }
 
+
 /* MAIN */
 main {
     padding : 5vw;
 }
+
+/* HEADER */
+
+.background{
+    height: 100vh;
+    background-image: url(background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.navbar{
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    padding: 10px;
+}
+
+.menuburger img{
+    width: 40px;
+    height: 40px;
+}
+
+.menuburger{
+    padding: 20px;
+}
+
+
+.title{
+    text-align: center;
+    position: relative;
+    top: 35vh;
+    font-family:  'Poppins', Verdana, sans-serif;
+}
+
+p{
+    color: #eee;
+}
+
+.boat {
+    position: absolute;
+    width: 300px;
+    top: 30vh;
+    }
 
 /* QUIZZ SECTION */
 
@@ -37,7 +88,6 @@ main {
 .association > p {
     color: var(--mainTextColor);
     text-align: center;
-
 }
 
 .associationImportantText {
@@ -172,6 +222,7 @@ footer > ul > li {
     all:unset;
     cursor:pointer;
 }
+
 
 .name {
     font-size: 0.8em;
