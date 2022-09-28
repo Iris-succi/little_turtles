@@ -1,17 +1,230 @@
+:root {
+
+    /* Text colors */ 
+        --mainTextColor : #eee;
+        --secondTextColor : #333;
+        --importantElementColor : #F5B95F;
+    
+    /* Quizz buttons color */ 
+        --quizzTrueColor : #F5B95F;
+        --quizzFalseColor: #DC6363;
+    
+    }
+
+
 * {
-    font-family: 'Poppins', Verdana, sans-serif;;
+    box-sizing: border-box;
+    font-family: 'Poppins', Verdana, sans-serif;
+
+   
 }
 
-element {
-
-/* Text colors */ 
-    --mainTextColor : #eee;
-    --secondTextColor : #333;
-    --importantElementColor : #F5B95F;
-
-/* Quizz buttons color */ 
-    --quizzTrueColor : #F5B95F;
-    --quizzFalseColor: #DC6363;
-
+body {
+    margin:0;
+    padding:0;
+    background: rgb(30,39,58);
+    background: linear-gradient(0deg, rgba(30,39,58,1) 17%, rgba(45,58,88,1) 52%, rgba(47,85,125,1) 100%);
 }
 
+
+/* MAIN */
+main {
+    padding : 5vw;
+}
+
+/* HEADER */
+
+.background{
+    height: 100vh;
+    background-image: url(background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.navbar{
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    padding: 10px;
+}
+
+.menuburger img{
+    width: 40px;
+    height: 40px;
+}
+
+.menuburger{
+    padding: 20px;
+}
+
+
+.title{
+    text-align: center;
+    position: relative;
+    top: 35vh;
+    font-family:  'Poppins', Verdana, sans-serif;
+}
+
+p{
+    color: #eee;
+}
+
+.boat {
+    position: absolute;
+    width: 300px;
+    top: 30vh;
+    }
+
+/* QUIZZ SECTION */
+
+
+/* SECTION ASSOCIATION */
+
+.association > p {
+    color: var(--mainTextColor);
+    text-align: center;
+}
+
+.associationImportantText {
+    color: var(--importantElementColor)
+}
+
+.associationParent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 0;
+    
+   justify-items: center;
+   margin:2rem;
+   
+}
+
+.childBloom {
+    grid-area: 1 / 1 / 2 / 2; 
+  
+}
+.childSea {
+    grid-area: 1 / 3 / 2 / 4; 
+  
+}
+
+.childOdyssey {
+    grid-area: 2 / 2 / 3 / 3; 
+    
+}
+
+.childAlgalita {
+    grid-area: 3 / 1 / 4 / 2; 
+   
+}
+
+.childRider {
+    grid-area: 3/ 3 / 4 / 4; 
+   
+}
+/* div logo circle */ 
+.circle {
+  height: 10vh;
+  width: 10vh;
+  border-radius: 50%;
+  display: inline-block;
+  border : 0.5px solid white;
+}
+
+.bloom {
+background-image: url(bloom_logo.jpeg) ;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+
+}
+.seashepherd {
+background-image: url(seasheperd_logo.webp) ;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
+
+.plasticodyssey {
+background-image: url(plasticodyssey_logo.png) ;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
+
+.algalita {
+    background-image: url(alaglita_logo.jpeg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.surfrider {
+background-image: url(surfrider_logo.jpeg) ;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
+
+
+/* HR */
+
+hr {
+    width: 80vw;
+    justify-content: center;
+}
+
+/* FOOTER */
+
+footer {
+    color: var(--mainTextColor);
+}
+
+h3, .wildersPresentation, ul {
+    text-align: center;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+}
+
+h3 {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    color : var(--importantElementColor);
+}
+
+footer > ul {
+    margin:0;
+    padding:0;
+    padding-bottom: 2vh;
+    display: grid;
+    
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 1rem;
+}
+
+footer > ul > li {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+
+.wilder {
+    all:unset;
+    cursor:pointer;
+}
+
+
+.name {
+    font-size: 0.8em;
+    color: var(--importantElementColor);
+}
