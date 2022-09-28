@@ -84,6 +84,7 @@ main {
   width: 10vh;
   border-radius: 50%;
   display: inline-block;
+  border : 0.5px solid white;
 }
 
 .bloom {
