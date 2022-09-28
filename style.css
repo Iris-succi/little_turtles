@@ -1,5 +1,8 @@
 * {
-    font-family: 'Poppins', Verdana, sans-serif;;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Verdana, sans-serif;
 }
 
 element {
@@ -15,3 +18,47 @@ element {
 
 }
 
+.background{
+    height: 100vh;
+    background-image: url(background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    padding: 10px;
+}
+
+.menuburger img{
+    width: 40px;
+    height: 40px;
+}
+
+.menuburger{
+    padding: 20px;
+}
+
+
+.title{
+    text-align: center;
+    position: relative;
+    top: 35vh;
+    font-family:  'Poppins', Verdana, sans-serif;
+}
+
+p{
+    color: #eee;
+}
+
+.boat {
+    position: absolute;
+    width: 300px;
+    top: 30vh;
+}
