@@ -110,7 +110,7 @@ function createQuizzElements(singleQuestion) {
 
   //Answer button 1
   singleQuestion.answerOptions.forEach((answer) => {
-    answerElement1 = document.createElement("button");
+    const answerElement1 = document.createElement("button");
     answerElement1.classList.add("answer");
     answerElement1.innerHTML = answer;
     answerElement1.addEventListener("click", () => {
@@ -118,9 +118,14 @@ function createQuizzElements(singleQuestion) {
         singleQuestion.answerOptions.indexOf(answer) ===
         singleQuestion.validIndex
       ) {
-        console.log("vrai");
+        answerElement1.classList.add("true");
+        explanation.style.display = "inline";
+        buttonQuizz.classList.add("stopClick");
       } else {
         console.log("faux");
+        answerElement1.classList.add("false");
+        explanation.style.display = "inline";
+        buttonQuizz.classList.add("stopClick");
       }
     });
     buttonQuizz.appendChild(answerElement1);
