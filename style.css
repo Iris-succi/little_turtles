@@ -83,6 +83,21 @@ p{
 /* QUIZZ SECTION */
 
 
+.true {
+    background-color: var(--quizzTrueColor);
+}
+.false {
+    background-color: var(--quizzFalseColor);
+}
+
+.explanation {
+    display : none;
+}
+
+.stopClick {
+    pointer-events: none;
+}
+
 /* SECTION ASSOCIATION */
 
 .association > p {

@@ -65,6 +65,21 @@ const questions = [
     knowMoreText: "Le plastique ce n'est pas fantastique",
   },
 ];
+/* 
+function verify(answer) {
+  const allButton = document.getElementsByClassName("button");
+  console.log(allButton);
+
+  for (let i = 0; i < allButton.length; i++) {
+    allButton[i].addEventListener("click", function () {
+      if (allButton.indexOf() == answer.validIndex) {
+        ("vrai");
+      } else {
+        ("faux");
+      }
+    });
+  }
+} */
 
 function createQuizzElements(singleQuestion) {
   // Create article element which correspond to the block containing the picto, the question and its answers
@@ -95,9 +110,24 @@ function createQuizzElements(singleQuestion) {
 
   //Answer button 1
   singleQuestion.answerOptions.forEach((answer) => {
-    answerElement1 = document.createElement("button");
+    const answerElement1 = document.createElement("button");
     answerElement1.classList.add("answer");
     answerElement1.innerHTML = answer;
+    answerElement1.addEventListener("click", () => {
+      if (
+        singleQuestion.answerOptions.indexOf(answer) ===
+        singleQuestion.validIndex
+      ) {
+        answerElement1.classList.add("true");
+        explanation.style.display = "inline";
+        buttonQuizz.classList.add("stopClick");
+      } else {
+        console.log("faux");
+        answerElement1.classList.add("false");
+        explanation.style.display = "inline";
+        buttonQuizz.classList.add("stopClick");
+      }
+    });
     buttonQuizz.appendChild(answerElement1);
   });
 
