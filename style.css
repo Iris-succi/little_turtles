@@ -282,6 +282,7 @@ hr {
 
 footer {
     color: var(--mainTextColor);
+    padding-bottom: 5vh;
 }
 
 h3,
@@ -328,6 +329,24 @@ footer>ul>li {
     font-size: 0.8em;
     color: var(--importantElementColor);
 }
+
+.thanks {
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+.someMistersModern {
+    color: var(--importantElementColor);
+}
+.someMistersModern>a {
+    all: unset;
+    cursor: pointer;
+}
+
+
+
+
+
 
 /*Menu burger*/
 
