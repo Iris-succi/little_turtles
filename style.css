@@ -328,3 +328,66 @@ footer>ul>li {
     font-size: 0.8em;
     color: var(--importantElementColor);
 }
+
+/*Menu burger*/
+.sidenav {
+    height: 100vh;
+    width: 220px;
+    position: absolute;
+    /* peut importe les mouvements que je vais faire sur l'écran, la position de l'élément ne boug */
+    z-index: 1;
+    /* Là où mon élément est situé par rapport à l'axe z (profondeur en 3D : plus il est élevé et plus l'élément sera proche de toi) : Par défaut, tous les éléments affichés ont un index à zéro. Donc en mettant 1'élément à l'air plus proche */
+    top: 0;
+    /* On l'utilise en position fixed et définit où sera mon élément dans ma fenêtre. Top 0 = tout en haut */
+    background-color: #2F557D;
+    padding-top: 60px;
+    transition: right 0.3s ease;
+    /* left est la propriété  qui, quand on fera l'action (cf sidenav.active) prendra 0.5s à passer de 180px à 0. ease c'est un genre de transition (ça s'ouvre en joli) */
+    right: -220px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    /* Enlève le style existant sur le texte courant : ici c'est une a donc texte souligné si pas none. */
+    font-size: 25px;
+    color: #eee;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #F5B95F;
+    /* quand la souris survole les éléments du menu, ils prennent cette couleur */
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.sidenav.active {
+    right: 0px;
+}
+
+.sidenav.close {
+    position: absolute;
+    top: 0;
+    right: -220px;
+    /* largeur de disparition de l'élément : mon élément sera décalé de -220% sur la gauche */
+    font-size: 36px;
+}
+
+.burger-icon span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: #F5B95F;
+    margin: 6px 0;
+}
+/*Fin menu burger*/
