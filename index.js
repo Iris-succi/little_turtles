@@ -4,7 +4,7 @@ const quizz = document.querySelector("#quizz");
 // 2) Create the array which contains all the quizz structure elements required
 const questions = [
   {
-    pictogram: "https://placekitten.com/200/287",
+    pictogram: "bouee.svg",
     question:
       "Combien de tonnes de plastique sont rejetées à la mer chaque année ?",
     answerOptions: [
@@ -17,7 +17,7 @@ const questions = [
     knowMoreText: "Les tortues sont belles et gentilles",
   },
   {
-    pictogram: "https://placekitten.com/200/287",
+    pictogram: "bouee.svg",
     question:
       "Selon la législation de la commission européenne, quels produits à usages uniques ne sont plus autorisés à la vente ?",
     answerOptions: [
@@ -30,14 +30,14 @@ const questions = [
     knowMoreText: "Le plastique ce n'est pas fantastique",
   },
   {
-    pictogram: "https://placekitten.com/200/287",
+    pictogram: "bouee.svg",
     question: "Qu’appelle t-on le 7e continent ?",
     answerOptions: ["Afrique", "Europe", "Asie", "Amat de dechets"],
     validIndex: 3,
     knowMoreText: "Les crabes aussi mais ils pincent !",
   },
   {
-    pictogram: "https://placekitten.com/200/287",
+    pictogram: "bouee.svg",
     question:
       "Quelles espèces marines sont en voie de disparition à cause de la pollution des eaux ? ",
     answerOptions: ["Thon rouge", "Requin", "Tortue", "Poisson rouge"],
@@ -45,7 +45,7 @@ const questions = [
     knowMoreText: "Le plastique ce n'est pas fantastique",
   },
   {
-    pictogram: "https://placekitten.com/200/287",
+    pictogram: "bouee.svg",
     question:
       "Quel pourcentage des déchets de la mer représentent les mégots et les filtres de cigarette ? ",
     answerOptions: ["10%", "20%", "30%", "40%"],
@@ -53,7 +53,7 @@ const questions = [
     knowMoreText: "Le plastique ce n'est pas fantastique",
   },
   {
-    pictogram: "https://placekitten.com/200/287",
+    pictogram: "bouee.svg",
     question: "Qu’à t-on retrouver dans le corps d’un bébé tortue en 2019 ?",
     answerOptions: [
       "Une brosse a dent",
@@ -65,21 +65,6 @@ const questions = [
     knowMoreText: "Le plastique ce n'est pas fantastique",
   },
 ];
-/* 
-function verify(answer) {
-  const allButton = document.getElementsByClassName("button");
-  console.log(allButton);
-
-  for (let i = 0; i < allButton.length; i++) {
-    allButton[i].addEventListener("click", function () {
-      if (allButton.indexOf() == answer.validIndex) {
-        ("vrai");
-      } else {
-        ("faux");
-      }
-    });
-  }
-} */
 
 function createQuizzElements(singleQuestion) {
   // Create article element which correspond to the block containing the picto, the question and its answers
@@ -94,7 +79,7 @@ function createQuizzElements(singleQuestion) {
   // _picto
   const pictoElement = document.createElement("div");
   pictoElement.classList.add("picto");
-  pictoElement.innerHTML = singleQuestion.pictogram;
+  pictoElement.innerHTML = '<img src ="' + singleQuestion.pictogram + '">';
   headerQuizz.appendChild(pictoElement);
 
   //_h2
@@ -118,6 +103,7 @@ function createQuizzElements(singleQuestion) {
         singleQuestion.answerOptions.indexOf(answer) ===
         singleQuestion.validIndex
       ) {
+
         answerElement1.classList.add("true");
         explanation.style.display = "inline";
         buttonQuizz.classList.add("stopClick");
@@ -131,6 +117,8 @@ function createQuizzElements(singleQuestion) {
     buttonQuizz.appendChild(answerElement1);
   });
 
+
+
   // paragraph that will show the knowMoreText content once the question answered
   const explanation = document.createElement("p");
   explanation.classList.add("explanation");
@@ -138,7 +126,11 @@ function createQuizzElements(singleQuestion) {
   quizzElements.appendChild(explanation);
 }
 
+
+
 // 4) Creation of a loop to generate the different articles/questions elements from the array
 for (let i = 0; i < questions.length; i++) {
   createQuizzElements(questions[i]);
 }
+
+
