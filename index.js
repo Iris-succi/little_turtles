@@ -1,3 +1,22 @@
+//Menu Burger//
+const sidenav = document.getElementById("mySidenav");
+const openBtn = document.getElementById("openBtn");
+const closeBtn = document.getElementById("closeBtn");
+
+openBtn.onclick = openNav;
+closeBtn.onclick = closeNav;
+
+function openNav() {
+  sidenav.classList.add("active");
+  sidenav.classList.remove("close");
+}
+
+function closeNav() {
+  sidenav.classList.remove("active");
+  sidenav.classList.add("close");
+}
+//Fin menu Burger//
+
 // 1) Select the HTML section that will contain all quizz elements
 const quizz = document.querySelector("#quizz");
 
@@ -95,9 +114,19 @@ function createQuizzElements(singleQuestion) {
 
   //Answer button 1
   singleQuestion.answerOptions.forEach((answer) => {
-    answerElement1 = document.createElement("button");
+    const answerElement1 = document.createElement("button");
     answerElement1.classList.add("answer");
     answerElement1.innerHTML = answer;
+    answerElement1.addEventListener("click", () => {
+      if (
+        singleQuestion.answerOptions.indexOf(answer) ===
+        singleQuestion.validIndex
+      ) {
+        answerElement1.style.backgroundColor = "#F5B95F";
+      } else {
+        answerElement1.style.backgroundColor = "#A2D2FF";
+      }
+    });
     buttonQuizz.appendChild(answerElement1);
   });
 

@@ -1,40 +1,40 @@
 :root {
 
-    /* Text colors */ 
-        --mainTextColor : #eee;
-        --secondTextColor : #333;
-        --importantElementColor : #F5B95F;
-    
-    /* Quizz buttons color */ 
-        --quizzTrueColor : #F5B95F;
-        --quizzFalseColor: #DC6363;
-    
-    }
+    /* Text colors */
+    --mainTextColor: #eee;
+    --secondTextColor: #333;
+    --importantElementColor: #F5B95F;
+
+    /* Quizz buttons color */
+    --quizzTrueColor: #F5B95F;
+    --quizzFalseColor: #DC6363;
+
+}
 
 
 * {
     box-sizing: border-box;
     font-family: 'Poppins', Verdana, sans-serif;
 
-   
+
 }
 
 body {
-    margin:0;
-    padding:0;
-    background: rgb(30,39,58);
-    background: linear-gradient(0deg, rgba(30,39,58,1) 17%, rgba(45,58,88,1) 52%, rgba(47,85,125,1) 100%);
+    margin: 0;
+    padding: 0;
+    background: rgb(30, 39, 58);
+    background: linear-gradient(0deg, rgba(30, 39, 58, 1) 17%, rgba(45, 58, 88, 1) 52%, rgba(47, 85, 125, 1) 100%);
 }
 
 
 /* MAIN */
 main {
-    padding : 5vw;
+    padding: 5vw;
 }
 
 /* HEADER */
 
-.background{
+.background {
     height: 100vh;
     background-image: url(background.svg);
     background-repeat: no-repeat;
@@ -43,34 +43,24 @@ main {
 }
 
 
-.navbar{
+.navbar {
     height: 8vh;
     display: flex;
     justify-content: space-between;
 }
 
-.logo{
+.logo {
     padding: 10px;
 }
 
-.menuburger img{
-    width: 40px;
-    height: 40px;
-}
-
-.menuburger{
-    padding: 20px;
-}
-
-
-.title{
+.title {
     text-align: center;
     position: relative;
     top: 35vh;
-    font-family:  'Poppins', Verdana, sans-serif;
+    font-family: 'Poppins', Verdana, sans-serif;
 }
 
-p{
+p {
     color: #eee;
 }
 
@@ -78,14 +68,14 @@ p{
     position: absolute;
     width: 300px;
     top: 30vh;
-    }
+}
 
 /* QUIZZ SECTION */
 
 
 /* SECTION ASSOCIATION */
 
-.association > p {
+.association>p {
     color: var(--mainTextColor);
     text-align: center;
 }
@@ -99,77 +89,80 @@ p{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 0;
-    
-   justify-items: center;
-   margin:2rem;
-   
+
+    justify-items: center;
+    margin: 2rem;
+
 }
 
 .childBloom {
-    grid-area: 1 / 1 / 2 / 2; 
-  
+    grid-area: 1 / 1 / 2 / 2;
+
 }
+
 .childSea {
-    grid-area: 1 / 3 / 2 / 4; 
-  
+    grid-area: 1 / 3 / 2 / 4;
+
 }
 
 .childOdyssey {
-    grid-area: 2 / 2 / 3 / 3; 
-    
+    grid-area: 2 / 2 / 3 / 3;
+
 }
 
 .childAlgalita {
-    grid-area: 3 / 1 / 4 / 2; 
-   
+    grid-area: 3 / 1 / 4 / 2;
+
 }
 
 .childRider {
-    grid-area: 3/ 3 / 4 / 4; 
-   
+    grid-area: 3/ 3 / 4 / 4;
+
 }
-/* div logo circle */ 
+
+/* div logo circle */
 .circle {
-  height: 10vh;
-  width: 10vh;
-  border-radius: 50%;
-  display: inline-block;
-  border : 0.5px solid white;
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+    display: inline-block;
+    border: 0.5px solid white;
 }
 
 .bloom {
-background-image: url(bloom_logo.jpeg) ;
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
+    background-image: url(bloom_logo.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
 }
+
 .seashepherd {
-background-image: url(seasheperd_logo.webp) ;
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
+    background-image: url(seasheperd_logo.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .plasticodyssey {
-background-image: url(plasticodyssey_logo.png) ;
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
+    background-image: url(plasticodyssey_logo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .algalita {
-    background-image: url(alaglita_logo.jpeg) ;
+    background-image: url(alaglita_logo.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .surfrider {
-background-image: url(surfrider_logo.jpeg) ;
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
+    background-image: url(surfrider_logo.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -186,7 +179,9 @@ footer {
     color: var(--mainTextColor);
 }
 
-h3, .wildersPresentation, ul {
+h3,
+.wildersPresentation,
+ul {
     text-align: center;
     padding-bottom: 2vh;
     padding-top: 2vh;
@@ -195,15 +190,15 @@ h3, .wildersPresentation, ul {
 h3 {
     padding-top: 2vh;
     padding-bottom: 2vh;
-    color : var(--importantElementColor);
+    color: var(--importantElementColor);
 }
 
-footer > ul {
-    margin:0;
-    padding:0;
+footer>ul {
+    margin: 0;
+    padding: 0;
     padding-bottom: 2vh;
     display: grid;
-    
+
 
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -211,7 +206,7 @@ footer > ul {
     grid-row-gap: 1rem;
 }
 
-footer > ul > li {
+footer>ul>li {
     list-style-type: none;
     display: flex;
     justify-content: center;
@@ -219,8 +214,8 @@ footer > ul > li {
 
 
 .wilder {
-    all:unset;
-    cursor:pointer;
+    all: unset;
+    cursor: pointer;
 }
 
 
@@ -228,3 +223,67 @@ footer > ul > li {
     font-size: 0.8em;
     color: var(--importantElementColor);
 }
+
+/*Menu Burger*/
+.sidenav {
+    height: 100vh;
+    width: 220px;
+    position: absolute;
+    /* peut importe les mouvements que je vais faire sur l'écran, la position de l'élément ne boug */
+    z-index: 1;
+    /* Là où mon élément est situé par rapport à l'axe z (profondeur en 3D : plus il est élevé et plus l'élément sera proche de toi) : Par défaut, tous les éléments affichés ont un index à zéro. Donc en mettant 1'élément à l'air plus proche */
+    top: 0;
+    /* On l'utilise en position fixed et définit où sera mon élément dans ma fenêtre. Top 0 = tout en haut */
+    background-color: #2F557D;
+    padding-top: 60px;
+    transition: right 0.3s ease;
+    /* left est la propriété  qui, quand on fera l'action (cf sidenav.active) prendra 0.5s à passer de 180px à 0. ease c'est un genre de transition (ça s'ouvre en joli) */
+    right: -220px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    /* Enlève le style existant sur le texte courant : ici c'est une a donc texte souligné si pas none. */
+    font-size: 25px;
+    color: #eee;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #F5B95F;
+    /* quand la souris survole les éléments du menu, ils prennent cette couleur */
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.sidenav.active {
+    right: 0px;
+}
+
+.sidenav.close {
+    position: absolute;
+    top: 0;
+    right: -220px;
+    /* largeur de disparition de l'élément : mon élément sera décalé de -220% sur la gauche */
+    font-size: 36px;
+}
+
+.burger-icon span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: #F5B95F;
+    margin: 6px 0;
+}
+
+/*Fin menu burger*/
