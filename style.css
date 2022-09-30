@@ -24,14 +24,19 @@
 body {
     margin: 0;
     padding: 0;
-    background: rgb(30, 39, 58);
-    background: linear-gradient(0deg, rgba(30, 39, 58, 1) 17%, rgba(45, 58, 88, 1) 52%, rgba(47, 85, 125, 1) 100%);
+    background-color: #2E537A;
 }
 
 
 /* MAIN */
-main {
+.secondIMG {
     padding: 5vw;
+ 
+    background-image: url(fond\ bleu\ foncé.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+     
+
 }
 
 /* HEADER */
@@ -46,14 +51,16 @@ main {
 
 
 .navbar{
-    height: 8vh;
+    position: absolute;
+    top: 0;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
 }
 
 
 .logo{
-    padding: 1em 1.5em;
+    padding-left: 0.5em
 }
 
 .logo img{
@@ -65,7 +72,7 @@ main {
 .title{
     text-align: center;
     position: relative;
-    top: 27vh;
+    top: 35vh;
     font-family:  'Poppins', Verdana, sans-serif;
 }
 h1{
@@ -384,7 +391,7 @@ footer>ul>li {
 }
 
 .sidenav a:hover {
-    color: #F5B95F;
+    color: var(--importantElementColor);
     /* quand la souris survole les éléments du menu, ils prennent cette couleur */
 }
 
@@ -411,7 +418,65 @@ footer>ul>li {
     display: block;
     width: 35px;
     height: 5px;
-    background-color: #F5B95F;
+    background-color: var(--importantElementColor);
     margin: 6px 0;
 }
+
+#burgerMenuPadding {
+    padding-right:0.5em;
+}
+
+#closeBtn {
+    position: absolute;
+    top:0;
+    right: 5px;
+    font-size: 2rem;
+    margin-right: 2px;
+    color: var(--importantElementColor);
+}
 /*Fin menu burger*/
+
+
+/* PARALLAX */
+
+/* scroll container is wrapper, like a body
+perspective for 3D effect = other value are relative to this value
+*/
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+} 
+
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px ;
+}
+
+
+.background, .foreground {
+    position : absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.foreground {
+  transform: translateZ(-5px) scale(2);
+ 
+}
+
+.background{
+    transform : translateZ(-10px) scale(2);
+}
+
+.wave {
+margin: -2vh;
+}
+
+  
