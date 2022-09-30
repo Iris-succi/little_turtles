@@ -36,12 +36,11 @@ main {
 
 .background{
     height: 100vh;
-    background-image: url(background.svg);
+    background-image: url(soleil_paradis_piou_piouV2.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
-
 
 .navbar{
     height: 8vh;
@@ -50,28 +49,31 @@ main {
 }
 
 .logo{
-    padding: 10px;
+    padding: 1em 1.5em;
 }
 
-.menuburger img{
-    width: 40px;
-    height: 40px;
+.logo img{
+    width: 50px;
+    height: 50px;   
+    transform: rotate(60deg);
 }
-
-.menuburger{
-    padding: 20px;
-}
-
 
 .title{
     text-align: center;
     position: relative;
-    top: 35vh;
+    top: 27vh;
     font-family:  'Poppins', Verdana, sans-serif;
 }
-
+h1{
+    margin: 0;
+}
 p{
+    width: 90%;
+    margin: 0 auto;
+    /* border: 1px solid #2f557d; */
+    /* border-radius: 15px; */
     color: #eee;
+    /* background-color: #2f557d; */
 }
 
 .boat {
@@ -79,6 +81,20 @@ p{
     width: 300px;
     top: 30vh;
     }
+
+/* This allows us to make the boat move up and down infinitely. One up and down move takes 5seconds*/
+.boat_active {
+    animation: moveBoat 5s ease-in-out infinite;
+}
+/*This keyframe states the area for the animation on the boat*/
+@keyframes moveBoat {
+    0% {
+        top: 30vh; /*vh = view height*/
+    }
+     50% {
+        top: 35vh;
+    } 
+}
 
 /* QUIZZ SECTION */
 
