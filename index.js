@@ -9,11 +9,13 @@ closeBtn.onclick = closeNav;
 function openNav() {
   sidenav.classList.add("active");
   sidenav.classList.remove("close");
+  sidenav.style.display = "block";
 }
 
 function closeNav() {
   sidenav.classList.remove("active");
   sidenav.classList.add("close");
+  sidenav.style.display = "none";
 }
 //Fin menu burger//
 
@@ -122,7 +124,6 @@ function createQuizzElements(singleQuestion) {
         singleQuestion.answerOptions.indexOf(answer) ===
         singleQuestion.validIndex
       ) {
-
         answerElement1.classList.add("true");
         explanation.style.display = "inline";
         buttonQuizz.classList.add("stopClick");
@@ -136,8 +137,6 @@ function createQuizzElements(singleQuestion) {
     buttonQuizz.appendChild(answerElement1);
   });
 
-
-
   // paragraph that will show the knowMoreText content once the question answered
   const explanation = document.createElement("p");
   explanation.classList.add("explanation");
@@ -145,11 +144,7 @@ function createQuizzElements(singleQuestion) {
   quizzElements.appendChild(explanation);
 }
 
-
-
 // 4) Creation of a loop to generate the different articles/questions elements from the array
 for (let i = 0; i < questions.length; i++) {
   createQuizzElements(questions[i]);
 }
-
-
