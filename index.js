@@ -1,3 +1,22 @@
+//Menu burger//
+const sidenav = document.getElementById("mySidenav");
+const openBtn = document.getElementById("openBtn");
+const closeBtn = document.getElementById("closeBtn");
+
+openBtn.onclick = openNav;
+closeBtn.onclick = closeNav;
+
+function openNav() {
+  sidenav.classList.add("active");
+  sidenav.classList.remove("close");
+}
+
+function closeNav() {
+  sidenav.classList.remove("active");
+  sidenav.classList.add("close");
+}
+//Fin menu burger//
+
 // 1) Select the HTML section that will contain all quizz elements
 const quizz = document.querySelector("#quizz");
 
