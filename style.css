@@ -12,13 +12,14 @@
     --quizzContour: #eee;
 
 }
+
 @font-face {
     font-family: Akrobat-Bold;
     src: url('./Police/Akrobat-Bold.eot');
     src: url('./Police/Akrobat-Bold.eot?#iefix') format('embedded-opentype'),
-    url('./Police/Akrobat-Bold.woff2') format('woff2'),
-    url('./Police/Akrobat-Bold.woff') format('woff'),
-    }
+        url('./Police/Akrobat-Bold.woff2') format('woff2'),
+        url('./Police/Akrobat-Bold.woff') format('woff'),
+}
 
 * {
     box-sizing: border-box;
@@ -48,7 +49,7 @@ body {
     background-position: center;
 }
 
-.navbar{
+.navbar {
     position: absolute;
     top: 0;
     width: 100vw;
@@ -56,30 +57,30 @@ body {
     justify-content: space-between;
 }
 
-.logo{
+.logo {
     padding-left: 1em;
     padding-top: 0.5em;
 }
 
-.logo img{
+.logo img {
     width: 50px;
-    height: 50px;   
+    height: 50px;
     transform: rotate(60deg);
 }
 
-.title{
+.title {
     text-align: center;
     position: relative;
     top: 35vh;
-    font-family:  'Poppins', Verdana, sans-serif;
+    font-family: 'Poppins', Verdana, sans-serif;
 }
 
-h1{
+h1 {
     margin: 0;
     font-family: 'Akrobat-Bold', Arial, Helvetica, sans-serif;
 }
 
-p{
+p {
     width: 90%;
     margin: 0 auto;
     color: #eee;
@@ -87,84 +88,84 @@ p{
 
 /*Menu burger*/
 #mySidenav {
-    display : none; 
- }
- 
- .sidenav {
-     height: 100vh;
-     width: 220px;
-     position: absolute;
-     /* peut importe les mouvements que je vais faire sur l'écran, la position de l'élément ne boug */
-     z-index: 1;
-     /* Là où mon élément est situé par rapport à l'axe z (profondeur en 3D : plus il est élevé et plus l'élément sera proche de toi) : Par défaut, tous les éléments affichés ont un index à zéro. Donc en mettant 1'élément à l'air plus proche */
-     top: 0;
-     /* On l'utilise en position fixed et définit où sera mon élément dans ma fenêtre. Top 0 = tout en haut */
-     background-color: #2F557D;
-     padding-top: 60px;
-     transition: right 0.3s ease;
-     /* left est la propriété  qui, quand on fera l'action (cf sidenav.active) prendra 0.5s à passer de 180px à 0. ease c'est un genre de transition (ça s'ouvre en joli) */
-     right: -220px;
-     display: flex;
-     justify-content: flex-start;
-     flex-direction: column;
-     align-items: flex-end;
- }
- 
- .sidenav a {
-     padding: 8px 8px 8px 32px;
-     text-decoration: none;
-     /* Enlève le style existant sur le texte courant : ici c'est une a donc texte souligné si pas none. */
-     font-size: 25px;
-     color: #eee;
-     display: block;
- }
- 
- .sidenav a:hover {
-     color: var(--importantElementColor);
-     /* quand la souris survole les éléments du menu, ils prennent cette couleur */
- }
- 
- .sidenav ul {
-     list-style-type: none;
-     padding: 0;
-     margin: 0;
-     text-align: right;
- }
- 
- .sidenav.active {
-     right: 0px;
- }
- 
- .sidenav.close {
-     position: absolute;
-     top: 0;
-     right: -220px;
-     /* largeur de disparition de l'élément : mon élément sera décalé de -220% sur la gauche */
-     font-size: 36px;
- }
- 
- .burger-icon span {
-     display: block;
-     width: 35px;
-     height: 5px;
-     background-color: var(--importantElementColor);
-     margin: 6px 0;
- }
- 
- #burgerMenuPadding {
-     padding-right:0.5em;
-     padding: 15px;
- }
- 
- #closeBtn {
-     position: absolute;
-     top:0;
-     right: 5px;
-     font-size: 2rem;
-     margin-right: 2px;
-     color: var(--importantElementColor);
- }
- 
+    display: none;
+}
+
+.sidenav {
+    height: 100vh;
+    width: 220px;
+    position: absolute;
+    /* peut importe les mouvements que je vais faire sur l'écran, la position de l'élément ne boug */
+    z-index: 1;
+    /* Là où mon élément est situé par rapport à l'axe z (profondeur en 3D : plus il est élevé et plus l'élément sera proche de toi) : Par défaut, tous les éléments affichés ont un index à zéro. Donc en mettant 1'élément à l'air plus proche */
+    top: 0;
+    /* On l'utilise en position fixed et définit où sera mon élément dans ma fenêtre. Top 0 = tout en haut */
+    background-color: #2F557D;
+    padding-top: 60px;
+    transition: right 0.3s ease;
+    /* left est la propriété  qui, quand on fera l'action (cf sidenav.active) prendra 0.5s à passer de 180px à 0. ease c'est un genre de transition (ça s'ouvre en joli) */
+    right: -220px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    /* Enlève le style existant sur le texte courant : ici c'est une a donc texte souligné si pas none. */
+    font-size: 25px;
+    color: #eee;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: var(--importantElementColor);
+    /* quand la souris survole les éléments du menu, ils prennent cette couleur */
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.sidenav.active {
+    right: 0px;
+}
+
+.sidenav.close {
+    position: absolute;
+    top: 0;
+    right: -220px;
+    /* largeur de disparition de l'élément : mon élément sera décalé de -220% sur la gauche */
+    font-size: 36px;
+}
+
+.burger-icon span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: var(--importantElementColor);
+    margin: 6px 0;
+}
+
+#burgerMenuPadding {
+    padding-right: 0.5em;
+    padding: 15px;
+}
+
+#closeBtn {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 2rem;
+    margin-right: 2px;
+    color: var(--importantElementColor);
+}
+
 /* PARALLAX */
 /* scroll container is wrapper, like a body
 perspective for 3D effect = other value are relative to this value
@@ -177,71 +178,66 @@ header {
     height: 100%;
     transform-style: preserve-3d;
     z-index: -1;
-} 
+}
 
 .wrapper {
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
-    perspective: 10px ;
+    perspective: 10px;
 }
 
-.background, .foreground {
-    position : absolute;
+.background,
+.foreground {
+    position: absolute;
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
 .foreground {
-  transform: translateZ(-5px) scale(2);
+    transform: translateZ(-5px) scale(2);
 }
 
-.background{
-    transform : translateZ(-10px) scale(2);
+.background {
+    transform: translateZ(-10px) scale(2);
 }
 
 .wave {
-margin: -2vh;
+    margin: -2vh;
 }
-/* 
-.boat {
-    position: absolute;
-    width: 300px;
-    top: 30vh;
-} */
 
 /* This allows us to make the boat move up and down infinitely. One up and down move takes 5seconds*/
 .boat_active {
     animation: moveBoat 10s ease-in-out infinite;
 }
+
 /*This keyframe states the area for the animation on the boat*/
 @keyframes moveBoat {
     0% {
-        transform: translateX(-250px); /*vh = view height*/
+        transform: translateX(-250px);
+        /*vh = view height*/
     }
+
     33% {
         transform: translateX(0px);
-    } 
-    66%{
+    }
+
+    66% {
         transform: translateX(320px);
     }
-    99%{
+
+    99% {
         opacity: 1;
     }
-    100%{
+
+    100% {
         transform: translateX(320px);
         opacity: 0;
     }
 }
 
 /* QUIZZ SECTION */
-.article {
-    display: grid;
-    grid-template-rows: 20fr 20fr 20fr;
-    padding: 5vw;
-}
-
 .headerQuizz {
     text-align: center;
     display: flex;
@@ -255,7 +251,7 @@ margin: -2vh;
     display: grid;
     grid-template-columns: 20fr 20fr;
     grid-template-rows: 20fr 20fr;
-    gap: 10px;
+    gap: 20px;
     max-width: 65ch;
 }
 
@@ -267,6 +263,7 @@ margin: -2vh;
     height: 10vh;
     width: auto;
     font-size: 1.2em;
+    box-shadow: -0.8px 2px 1px 0.5px rgb(245, 185, 95);
 }
 
 .answer:hover {
@@ -293,22 +290,20 @@ div.buttonQuizz {
     padding: 2vw;
 }
 
-.explanation {
-    margin: 0;
-    padding: 2vw;
-    font-size: 1.2em;
-    text-align: center;
-}
-
 .true {
     background-color: var(--quizzTrueColor);
 }
+
 .false {
     background-color: var(--quizzFalseColor);
 }
 
 .explanation {
-    display : none;
+    display: none;
+    margin-top: 2vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    font-size: 1.2em;
 }
 
 .stopClick {
