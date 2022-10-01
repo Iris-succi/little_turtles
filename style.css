@@ -94,7 +94,7 @@ p {
  .sidenav {
      height: 100vh;
      width: 220px;
-     position: absolute;
+     position: fixed;
      /* peut importe les mouvements que je vais faire sur l'écran, la position de l'élément ne boug */
      z-index: 1;
      /* Là où mon élément est situé par rapport à l'axe z (profondeur en 3D : plus il est élevé et plus l'élément sera proche de toi) : Par défaut, tous les éléments affichés ont un index à zéro. Donc en mettant 1'élément à l'air plus proche */
@@ -468,3 +468,95 @@ footer>ul>li {
     all: unset;
     cursor: pointer;
 }
+
+/*Media queries desktop*/
+@media screen and (min-width: 1200px){
+
+    #mySidenav {
+        display : none;
+        padding-top: 8px;
+     }
+     
+     .sidenav {
+         height: 70px;
+         width: 100%;
+         position: fixed;
+         /* peut importe les mouvements que je vais faire sur l'écran, la position de l'élément ne boug */
+         z-index: 1;
+         /* Là où mon élément est situé par rapport à l'axe z (profondeur en 3D : plus il est élevé et plus l'élément sera proche de toi) : Par défaut, tous les éléments affichés ont un index à zéro. Donc en mettant 1'élément à l'air plus proche */
+         top: 0;
+         /* On l'utilise en position fixed et définit où sera mon élément dans ma fenêtre. Top 0 = tout en haut */
+         background-color: #2F557D;
+         transition: right 0.3s ease;
+         /* left est la propriété  qui, quand on fera l'action (cf sidenav.active) prendra 0.5s à passer de 180px à 0. ease c'est un genre de transition (ça s'ouvre en joli) */
+         display: flex;
+         flex-direction:row;
+         align-items: flex-start;
+     }
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        /* Enlève le style existant sur le texte courant : ici c'est une a donc texte souligné si pas none. */
+        font-size: 25px;
+        color: #eee;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        margin-right: 30px;
+    }
+    
+    .sidenav a:hover {
+        color: var(--importantElementColor);
+        /* quand la souris survole les éléments du menu, ils prennent cette couleur */
+    }
+    
+    .sidenav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .sidenav.active {
+        right: 0px;
+    }
+    
+    .sidenav.close {
+        position: absolute;
+        top: 0;
+        right: -220px;
+        /* largeur de disparition de l'élément : mon élément sera décalé de -220% sur la gauche */
+        font-size: 36px;
+    }
+    
+    .burger-icon span {
+        display: block;
+        width: 35px;
+        height: 5px;
+        background-color: var(--importantElementColor);
+        margin: 6px 0;
+    }
+    
+    #burgerMenuPadding {
+        display: flex;
+        flex-direction: row;
+        padding-right:0.5em;
+        padding: 15px;
+    }
+    
+    #closeBtn {
+        position: absolute;
+        top:0;
+        right: 5px;
+        font-size: 2rem;
+        margin-right: 15px;
+        color: var(--importantElementColor);
+    }
+    }
+/*Fin media queries desktop*/
+
