@@ -17,9 +17,9 @@
     font-family: Akrobat-Bold;
     src: url('./Police/Akrobat-Bold.eot');
     src: url('./Police/Akrobat-Bold.eot?#iefix') format('embedded-opentype'),
-    url('./Police/Akrobat-Bold.woff2') format('woff2'),
-    url('./Police/Akrobat-Bold.woff') format('woff'),
-    }
+        url('./Police/Akrobat-Bold.woff2') format('woff2'),
+        url('./Police/Akrobat-Bold.woff') format('woff'),
+}
 
 * {
     box-sizing: border-box;
@@ -49,7 +49,7 @@ body {
     background-position: center;
 }
 
-.navbar{
+.navbar {
     position: absolute;
     top: 0;
     width: 100vw;
@@ -57,30 +57,30 @@ body {
     justify-content: space-between;
 }
 
-.logo{
+.logo {
     padding-left: 1em;
     padding-top: 0.5em;
 }
 
-.logo img{
+.logo img {
     width: 50px;
-    height: 50px;   
+    height: 50px;
     transform: rotate(60deg);
 }
 
-.title{
+.title {
     text-align: center;
     position: relative;
     top: 35vh;
-    font-family:  'Poppins', Verdana, sans-serif;
+    font-family: 'Poppins', Verdana, sans-serif;
 }
 
-h1{
+h1 {
     margin: 0;
     font-family: 'Akrobat-Bold', Arial, Helvetica, sans-serif;
 }
 
-p{
+p {
     width: 90%;
     margin: 0 auto;
     color: #eee;
@@ -166,7 +166,7 @@ p{
      margin-right: 15px;
      color: var(--importantElementColor);
  }
- 
+
 /* PARALLAX */
 /* scroll container is wrapper, like a body
 perspective for 3D effect = other value are relative to this value
@@ -179,71 +179,66 @@ header {
     height: 100%;
     transform-style: preserve-3d;
     z-index: -1;
-} 
+}
 
 .wrapper {
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
-    perspective: 10px ;
+    perspective: 10px;
 }
 
-.background, .foreground {
-    position : absolute;
+.background,
+.foreground {
+    position: absolute;
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
 .foreground {
-  transform: translateZ(-5px) scale(2);
+    transform: translateZ(-5px) scale(2);
 }
 
-.background{
-    transform : translateZ(-10px) scale(2);
+.background {
+    transform: translateZ(-10px) scale(2);
 }
 
 .wave {
-margin: -2vh;
+    margin: -2vh;
 }
-/* 
-.boat {
-    position: absolute;
-    width: 300px;
-    top: 30vh;
-} */
 
 /* This allows us to make the boat move up and down infinitely. One up and down move takes 5seconds*/
 .boat_active {
     animation: moveBoat 10s ease-in-out infinite;
 }
+
 /*This keyframe states the area for the animation on the boat*/
 @keyframes moveBoat {
     0% {
-        transform: translateX(-250px); /*vh = view height*/
+        transform: translateX(-250px);
+        /*vh = view height*/
     }
+
     33% {
         transform: translateX(0px);
-    } 
-    66%{
+    }
+
+    66% {
         transform: translateX(320px);
     }
-    99%{
+
+    99% {
         opacity: 1;
     }
-    100%{
+
+    100% {
         transform: translateX(320px);
         opacity: 0;
     }
 }
 
 /* QUIZZ SECTION */
-.article {
-    display: grid;
-    grid-template-rows: 20fr 20fr 20fr;
-    padding: 5vw;
-}
-
 .headerQuizz {
     text-align: center;
     display: flex;
@@ -257,7 +252,7 @@ margin: -2vh;
     display: grid;
     grid-template-columns: 20fr 20fr;
     grid-template-rows: 20fr 20fr;
-    gap: 10px;
+    gap: 20px;
     max-width: 65ch;
 }
 
@@ -269,6 +264,7 @@ margin: -2vh;
     height: 10vh;
     width: auto;
     font-size: 1.2em;
+    box-shadow: -0.8px 2px 1px 0.5px rgb(245, 185, 95);
 }
 
 .answer:hover {
@@ -295,22 +291,20 @@ div.buttonQuizz {
     padding: 2vw;
 }
 
-.explanation {
-    margin: 0;
-    padding: 2vw;
-    font-size: 1.2em;
-    text-align: center;
-}
-
 .true {
     background-color: var(--quizzTrueColor);
 }
+
 .false {
     background-color: var(--quizzFalseColor);
 }
 
 .explanation {
-    display : none;
+    display: none;
+    margin-top: 2vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    font-size: 1.2em;
 }
 
 .stopClick {
@@ -589,3 +583,4 @@ footer>ul>li {
     }
     }
 /*Fin media queries desktop*/
+
