@@ -473,7 +473,7 @@ footer>ul>li {
 @media screen and (min-width: 1200px){
 
     #mySidenav {
-        display : none;
+        display : block;
         padding-top: 8px;
      }
      
@@ -487,11 +487,11 @@ footer>ul>li {
          top: 0;
          /* On l'utilise en position fixed et définit où sera mon élément dans ma fenêtre. Top 0 = tout en haut */
          background-color: #2F557D;
-         transition: right 0.3s ease;
-         /* left est la propriété  qui, quand on fera l'action (cf sidenav.active) prendra 0.5s à passer de 180px à 0. ease c'est un genre de transition (ça s'ouvre en joli) */
          display: flex;
          flex-direction:row;
          align-items: flex-start;
+         left: 0px;
+         right: 0px;
      }
 
     .sidenav a {
@@ -529,7 +529,7 @@ footer>ul>li {
     .sidenav.close {
         position: absolute;
         top: 0;
-        right: -220px;
+        right: 0px;
         /* largeur de disparition de l'élément : mon élément sera décalé de -220% sur la gauche */
         font-size: 36px;
     }
@@ -552,10 +552,46 @@ footer>ul>li {
     #closeBtn {
         position: absolute;
         top:0;
-        right: 5px;
+        right: 0px;
         font-size: 2rem;
         margin-right: 15px;
         color: var(--importantElementColor);
+        display: none;
+    }
+
+    .boat_active {
+        width: 500px;
+        animation: moveBoat 20s ease-in-out infinite;
+    }
+    /*This keyframe states the area for the animation on the boat*/
+    @keyframes moveBoat {
+        0% {
+            transform: translateX(-250px); /*vh = view height*/
+        }
+        33% {
+            transform: translateX(0px);
+        } 
+        66%{
+            transform: translateX(1700px);
+        }
+        99%{
+            opacity: 1;
+        }
+        100%{
+            transform: translateX(1000px);
+            opacity: 0;
+        }
+    }
+    .logo {
+        padding-left: 1em;
+        padding-top: 0.5em;
+        z-index: 10;
+    }
+    
+    .logo img {
+        width: 50px;
+        height: 50px;
+        transform: rotate(60deg);
     }
     }
 /*Fin media queries desktop*/
