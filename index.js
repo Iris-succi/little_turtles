@@ -29,13 +29,13 @@ const questions = [
     question:
       "Combien de tonnes de plastique sont rejetées à la mer chaque année ?",
     answerOptions: [
-      "400 000 tonnes",
+      "4 millions de tonnes",
       "600 000 tonnes",
-      "800 000 tonnes",
-      "900 000 tonnes",
+      "8 millions de tonnes",
+      "1 milliard de tonnes",
     ],
-    validIndex: 1,
-    knowMoreText: "Les tortues sont belles et gentilles",
+    validIndex: 2,
+    knowMoreText: "Chaque année, ce sont 8 millions de tonnes de plastique qui finissent dans les océans. Ces déchets menacent l'écosystème et sont responsables de la mise en danger (voir de la disparition) de la majorité des espèces marines. Source : https://www.liberation.fr/planete/2019/11/14/chaque-annee-8-millions-de-tonnes-de-plastique-finissent-dans-les-oceans_1763117/",
   },
   {
     pictogram: "./assets/waterwings.svg",
@@ -48,22 +48,22 @@ const questions = [
       "Brosse à dent",
     ],
     validIndex: 0,
-    knowMoreText: "Le plastique ce n'est pas fantastique",
+    knowMoreText: "Ce sont les pailles qui ne sont plus autorisées à la vente. Toutefois, chacunes des réponses peuvent ête considérées comme correctes car nous devons éviter d'utiliser chacun de ces objets au quotidien. Source : https://ec.europa.eu/commission/presscorner/detail/fr/qanda_21_2709",
   },
   {
     pictogram: "./assets/waterwings.svg",
     question: "Qu’appelle t-on le 7e continent ?",
     answerOptions: ["Afrique", "Europe", "Asie", "Amat de dechets"],
     validIndex: 3,
-    knowMoreText: "Les crabes aussi mais ils pincent !",
+    knowMoreText: "Le 7e continent n'est en réalité pas un vrai continent mais plutôt un aglomérat de déchet qui se trouve dans le Pacifique Nord (entre le Japon et la Californie). Malheureusement, il n'existe pas qu'un seul endroit où les déchets s'agglomèrent... Source : https://www.conservation-nature.fr/ecologie/la-pollution-des-oceans/#:~:text=L'effondrement%20de%20la%20biodiversit%C3%A9,abandonn%C3%A9s%20au%20fond%20des%20eaux.",
   },
   {
     pictogram: "./assets/waterwings.svg",
     question:
       "Quelles espèces marines sont en voie de disparition à cause de la pollution des eaux ? ",
     answerOptions: ["Thon rouge", "Requin", "Tortue", "Poisson rouge"],
-    validIndex: 0,
-    knowMoreText: "Le plastique ce n'est pas fantastique",
+    validIndex: 2,
+    knowMoreText: "Comme nous l'avons dit précédemment, toutes les espèces marines sont mises en danger par la pollution des eaux. Toutefois, parmi les espèces citées, ce sont les tortues qui en patîssent le plus, mourant régulièrement étouffées par des sacs plastiques. Source : https://www.conservation-nature.fr/animaux-habitat/mer-et-ocean/#:~:text=Baleine%20bleue&text=Sous%20l'effet%20de%20l,une%20dizaine%20d'ann%C3%A9es%20seulement.",
   },
   {
     pictogram: "./assets/waterwings.svg",
@@ -71,11 +71,11 @@ const questions = [
       "Quel pourcentage des déchets de la mer représentent les mégots et les filtres de cigarette ? ",
     answerOptions: ["10%", "20%", "30%", "40%"],
     validIndex: 3,
-    knowMoreText: "Le plastique ce n'est pas fantastique",
+    knowMoreText: "La majorité des gens jetent leurs mégots dans le caniveau. Ainsi, ils représentent quasiment 40% des déchets de la mer. Rien qu'en France, on estime que c'est environ un millier de mégots qui sont jetés chaque SECONDES dans la nature. Source : https://www.generationsanstabac.org/actualites/le-megots-gros-pollueur-des-mers-des-oceans/",
   },
   {
     pictogram: "./assets/waterwings.svg",
-    question: "Qu’à t-on retrouver dans le corps d’un bébé tortue en 2019 ?",
+    question: "Qu’à t-on retrouvé dans le corps d’un bébé tortue en 2019 ?",
     answerOptions: [
       "Une brosse a dent",
       "100 morceaux de plastique",
@@ -83,7 +83,7 @@ const questions = [
       "Capsule nespresso",
     ],
     validIndex: 1,
-    knowMoreText: "Le plastique ce n'est pas fantastique",
+    knowMoreText: "Lors de la période d'éclosion des tortues, en 2019 sur les côtes de Floride, des bénévoles ont trouvés une petite tortue (assez petite pour tenir dans la paume d'une main) en train de mourir à petit feu, étouffée par plus de 100 morceaux de plastique. Source : https://www.huffingtonpost.fr/actualites/article/cette-tortue-est-morte-avec-104-morceaux-de-plastique-dans-l-estomac_152723.html#:~:text=Gumbo%20Limbo%20Nature%20Center%20%2F%20Facebook,%C3%A9t%C3%A9%20retrouv%C3%A9s%20dans%20son%20estomac.&text=POLLUTION%20%2D%20Un%20triste%20rappel%20%C3%A0,%C3%A9closion%20des%20%C5%93ufs%20de%20tortues",
   },
 ];
 
@@ -125,12 +125,18 @@ function createQuizzElements(singleQuestion) {
         singleQuestion.validIndex
       ) {
         answerElement1.classList.add("true");
+        answerElement1.style.boxShadow = " -0.8px 2px 1px 0.5px #eee";
+        explanation.innerHTML = `Bravo !` + ` ${singleQuestion.knowMoreText}`;
         explanation.style.display = "inline-block";
+
         buttonQuizz.classList.add("stopClick");
       } else {
         console.log("faux");
         answerElement1.classList.add("false");
+      answerElement1.style.boxShadow = " -0.8px 2px 1px 0.5px #eee";
+        explanation.innerHTML = `Faux !` + ` ${singleQuestion.knowMoreText}`;
         explanation.style.display = "inline-block";
+
         buttonQuizz.classList.add("stopClick");
       }
     });
