@@ -125,11 +125,13 @@ function createQuizzElements(singleQuestion) {
         singleQuestion.validIndex
       ) {
         answerElement1.classList.add("true");
+        explanation.innerHTML = `Bravo !` + ` ${singleQuestion.knowMoreText}`;
         explanation.style.display = "inline";
         buttonQuizz.classList.add("stopClick");
       } else {
         console.log("faux");
         answerElement1.classList.add("false");
+        explanation.innerHTML = `Faux !` + ` ${singleQuestion.knowMoreText}`;
         explanation.style.display = "inline";
         buttonQuizz.classList.add("stopClick");
       }
