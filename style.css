@@ -563,5 +563,29 @@ footer>ul>li {
         margin-right: 15px;
         color: var(--importantElementColor);
     }
+
+    .boat_active {
+        width: 500px;
+        animation: moveBoat 20s ease-in-out infinite;
+    }
+    /*This keyframe states the area for the animation on the boat*/
+    @keyframes moveBoat {
+        0% {
+            transform: translateX(-250px); /*vh = view height*/
+        }
+        33% {
+            transform: translateX(0px);
+        } 
+        66%{
+            transform: translateX(1700px);
+        }
+        99%{
+            opacity: 1;
+        }
+        100%{
+            transform: translateX(1000px);
+            opacity: 0;
+        }
+    }
     }
 /*Fin media queries desktop*/
