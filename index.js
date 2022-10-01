@@ -25,7 +25,7 @@ const quizz = document.querySelector("#quizz");
 // 2) Create the array which contains all the quizz structure elements required
 const questions = [
   {
-    pictogram: "bouee.svg",
+    pictogram: "./assets/waterwings.svg",
     question:
       "Combien de tonnes de plastique sont rejetées à la mer chaque année ?",
     answerOptions: [
@@ -38,7 +38,7 @@ const questions = [
     knowMoreText: "Les tortues sont belles et gentilles",
   },
   {
-    pictogram: "bouee.svg",
+    pictogram: "./assets/waterwings.svg",
     question:
       "Selon la législation de la commission européenne, quels produits à usages uniques ne sont plus autorisés à la vente ?",
     answerOptions: [
@@ -51,14 +51,14 @@ const questions = [
     knowMoreText: "Le plastique ce n'est pas fantastique",
   },
   {
-    pictogram: "bouee.svg",
+    pictogram: "./assets/waterwings.svg",
     question: "Qu’appelle t-on le 7e continent ?",
     answerOptions: ["Afrique", "Europe", "Asie", "Amat de dechets"],
     validIndex: 3,
     knowMoreText: "Les crabes aussi mais ils pincent !",
   },
   {
-    pictogram: "bouee.svg",
+    pictogram: "./assets/waterwings.svg",
     question:
       "Quelles espèces marines sont en voie de disparition à cause de la pollution des eaux ? ",
     answerOptions: ["Thon rouge", "Requin", "Tortue", "Poisson rouge"],
@@ -66,7 +66,7 @@ const questions = [
     knowMoreText: "Le plastique ce n'est pas fantastique",
   },
   {
-    pictogram: "bouee.svg",
+    pictogram: "./assets/waterwings.svg",
     question:
       "Quel pourcentage des déchets de la mer représentent les mégots et les filtres de cigarette ? ",
     answerOptions: ["10%", "20%", "30%", "40%"],
@@ -74,7 +74,7 @@ const questions = [
     knowMoreText: "Le plastique ce n'est pas fantastique",
   },
   {
-    pictogram: "bouee.svg",
+    pictogram: "./assets/waterwings.svg",
     question: "Qu’à t-on retrouver dans le corps d’un bébé tortue en 2019 ?",
     answerOptions: [
       "Une brosse a dent",
