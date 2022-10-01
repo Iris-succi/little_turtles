@@ -125,12 +125,18 @@ function createQuizzElements(singleQuestion) {
         singleQuestion.validIndex
       ) {
         answerElement1.classList.add("true");
-        explanation.style.display = "inline";
+        answerElement1.style.boxShadow = " -0.8px 2px 1px 0.5px #eee";
+        explanation.innerHTML = `Bravo !` + ` ${singleQuestion.knowMoreText}`;
+        explanation.style.display = "inline-block";
+
         buttonQuizz.classList.add("stopClick");
       } else {
         console.log("faux");
         answerElement1.classList.add("false");
-        explanation.style.display = "inline";
+      answerElement1.style.boxShadow = " -0.8px 2px 1px 0.5px #eee";
+        explanation.innerHTML = `Faux !` + ` ${singleQuestion.knowMoreText}`;
+        explanation.style.display = "inline-block";
+
         buttonQuizz.classList.add("stopClick");
       }
     });
@@ -140,6 +146,10 @@ function createQuizzElements(singleQuestion) {
   // paragraph that will show the knowMoreText content once the question answered
   const explanation = document.createElement("p");
   explanation.classList.add("explanation");
+  explanation.style.textAlign = "center";
+  explanation.style.width = "100%";
+  explanation.style.backgroundColor = "rgb(101 165 230 / 30%)";
+  explanation.style.borderRadius = "12px";
   explanation.innerHTML = `${singleQuestion.knowMoreText}`;
   quizzElements.appendChild(explanation);
 }
