@@ -97,11 +97,6 @@ function createQuizzElements(singleQuestion) {
   // Create article element which correspond to the block containing the picto, the question and its answers
   const quizzElements = document.createElement("article");
   quizzElements.classList.add("quizz-elements");
-  quizzElements.style.height = "100vh";
-  quizzElements.style.display = "flex";
-  quizzElements.style.flexDirection = "column";
-  quizzElements.style.justifyContent = "center";
-  quizzElements.style.alignItems = "center";
   quizz.appendChild(quizzElements);
   // _header
   const headerQuizz = document.createElement("div");
@@ -178,39 +173,39 @@ const ctx = canvas.getContext("2d");
 
 //load images
 const turtle = new Image();
-turtle.src = "./assets/game/tortue_blanchev2.svg";
+turtle.src = "./assets/game/tortu.png";
 const straw = new Image();
-straw.src = "./assets/game/paille1.png";
+straw.src = "./assets/game/paille2.png";
 const bg = new Image();
-bg.src = "./assets/game/bg_game.png";
+bg.src = "./assets/game/bg3.png";
 
 //general settings
 let tX = 20; //turtle position
 let tY = 260; //turtle position
-let tWidth = 40;
-let tHeight = 40;
+let tWidth = 50;
+let tHeight = 39;
 let gravity = 1;
 let dechet = [];
 dechet[0] = {
   x: canvas.width,
   y: 0,
-  w: 45,
-  h: 78,
+  w: 44,
+  h: 50,
 };
 let gamePlaying = false;
 
 //Function move turtle Up + gravity and create random straw
 
-document.addEventListener("click", moveUp);
+canvas.addEventListener("click", moveUp);
 
 function moveUp() {
-  tY -= 80;
+  tY -= 40;
 }
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(bg, 0, 0, 320, 500);
   ctx.drawImage(turtle, tX, tY, tWidth, tHeight);
-  ctx.drawImage(bg, 0, 400, 320, 100);
 
   if (gamePlaying) {
     for (let i = 0; i < dechet.length; i++) {
@@ -221,8 +216,8 @@ function draw() {
         dechet.push({
           x: canvas.width,
           y: Math.floor(Math.random() * canvas.height),
-          w: 45,
-          h: 78,
+          w: 44,
+          h: 50,
         });
       }
       //collision
@@ -232,7 +227,7 @@ function draw() {
         tY < dechet[i].y + dechet[i].h &&
         tY + tHeight > dechet[i].y
       ) {
-        location.reload();
+        gamePlaying = false;
       }
     }
     tY += gravity;
@@ -246,4 +241,4 @@ function draw() {
 }
 
 draw();
-document.addEventListener("click", () => (gamePlaying = true));
+canvas.addEventListener("click", () => (gamePlaying = true));
