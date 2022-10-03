@@ -408,6 +408,24 @@ hr {
     justify-content: center;
 }
 
+/* Game */ 
+.gamepart{
+    height: 100vh;
+}
+.title2{
+    text-align: center;
+}
+
+.game{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.tortuegame{
+    border: 1px solid #eee;
+}
+
 /* FOOTER */
 footer {
     color: var(--mainTextColor);
