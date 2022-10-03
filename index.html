@@ -16,100 +16,101 @@
 
 <body>
 
-<div class="wrapper">
-<!-- Header contains H1, nav bar (burger menu), logo and scroll items -->
-<header>
-    <div class="navbar">
-        <div class="logo"><img src="./assets/logoturtle.svg" alt="logo tortue"></div>
-        <section id="burgerMenuPadding">
-            <div id="mySidenav" class="sidenav">
-              <a id="closeBtn" href="#" class="close">x</a>
-              <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Quizz !</a></li>
-                <li><a href="#">Associations</a></li>
-                <li><a href="#">Wilders</a></li>
-              </ul>
+    <div class="wrapper" id="wrapper">
+        <!-- Header contains H1, nav bar (burger menu), logo and scroll items -->
+        <header>
+            <div class="navbar">
+                <div class="logo"><img src="./assets/logoturtle.svg" alt="logo tortue"></div>
+                <section id="burgerMenuPadding">
+                    <div id="mySidenav" class="sidenav">
+                        <a id="closeBtn" href="#" class="close">x</a>
+                        <ul>
+                            <li><a href="#wrapper">Accueil</a></li>
+                            <li><a href="#quizz">Quizz !</a></li>
+                            <li><a href="#association">Associations</a></li>
+                            <li><a href="#wilders">Wilders</a></li>
+                        </ul>
+                    </div>
+
+                    <a href="#" id="openBtn">
+                        <span class="burger-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </a>
+                </section>
             </div>
-      
-            <a href="#" id="openBtn">
-              <span class="burger-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
-            </a>
-          </section>
-    </div>
-    
-    <img src="./assets/background/bgheader.svg" alt="background_intro" class="background">
-    <div class="foreground"><img src="./assets/boat.svg" class="boat_active"></div>
-    <div class="background">
-        
-        <div class="title">
-            <h1>Arretez de niquer <br>vos mers !</h1>
-            <p>Connaissez vous l'étendue des dégâts ?</p>
-        </div>
-      <!-- 
+
+            <img src="./assets/background/bgheader.svg" alt="background_intro" class="background">
+            <div class="foreground"><img src="./assets/boat.svg" class="boat_active"></div>
+            <div class="background">
+
+                <div class="title">
+                    <h1>Arretez de niquer <br>vos mers !</h1>
+                    <p>Connaissez vous l'étendue des dégâts ?</p>
+                </div>
+                <!-- 
           <div class="boat boat_active"><img src="./bateau tout bo.svg" alt="dessin de bateau"></div>
         <div class="scroll"></div>
-      -->  
-    </div>    
-</header>
-
-<img src="./assets/wave.svg" class="wave">
-    <!-- Body contains section/article (article = parent quizz) and section (asso)-->
-   <div class="secondIMG">
-    <main>
-        <section id="quizz">
-        </section>
-
-        <hr />
-
-        <section class="association">
-            <h3>Vous souhaitez continuer l'aventure ?</h3>
-
-            <p>N'hésitez pas à rejoindre l'une de ces associations.<br>Pour continuer à vous informer,
-                <br><span class="associationImportantText"> et pourquoi pas pour agir...</span>
-            </p>
-
-            <div class="associationParent">
-                <!-- Bloom -->
-                <div class="childBloom">
-                    <a href="https://bloomassociation.org/" alt="Bloom" target="_blank">
-                        <div class="bloom circle"></div>
-                    </a>
-                </div>
-                <!-- Sea Shepherd -->
-                <div class="childSea">
-                    <a href="https://seashepherd.fr/" alt="Sea Shepherd" target="_blank">
-                        <div class="seashepherd circle"></div>
-                    </a>
-                </div>
-                <!-- Plastic Odyssey-->
-                <div class="childOdyssey">
-                    <a href="https://plasticodyssey.org/" alt="Plastic Odyssey" target="_blank">
-                        <div class="plasticodyssey circle"></div>
-                    </a>
-                </div>
-                <!-- Algalita-->
-                <div class="childAlgalita">
-                    <a href="https://algalita.org/" alt="Algalita" target="_blank">
-                        <div class="algalita circle"></div>
-                    </a>
-                </div>
-
-                <!-- Surf Rider -->
-                <div class="childRider">
-                    <a href="https://surfrider.eu/" alt="Surf Rider" target="_blank">
-                        <div class="surfrider circle"></div>
-                    </a>
-                </div>
-
-
-
+      -->
             </div>
+        </header>
 
+        <img src="./assets/wave.svg" class="wave">
+        <!-- Body contains section/article (article = parent quizz) and section (asso)-->
+        <div class="secondIMG">
+            <main>
+                <section id="quizz">
+                </section>
+
+                <hr />
+
+                <section class="association" id="association">
+                    <h3>Vous souhaitez continuer l'aventure ?</h3>
+
+                    <p>N'hésitez pas à rejoindre l'une de ces associations.<br>Pour continuer à vous informer,
+                        <br><span class="associationImportantText"> et pourquoi pas pour agir...</span>
+                    </p>
+
+                    <div class="associationParent">
+                        <!-- Bloom -->
+                        <div class="childBloom">
+                            <a href="https://bloomassociation.org/" alt="Bloom" target="_blank">
+                                <div class="bloom circle"></div>
+                            </a>
+                        </div>
+                        <!-- Sea Shepherd -->
+                        <div class="childSea">
+                            <a href="https://seashepherd.fr/" alt="Sea Shepherd" target="_blank">
+                                <div class="seashepherd circle"></div>
+                            </a>
+                        </div>
+                        <!-- Plastic Odyssey-->
+                        <div class="childOdyssey">
+                            <a href="https://plasticodyssey.org/" alt="Plastic Odyssey" target="_blank">
+                                <div class="plasticodyssey circle"></div>
+                            </a>
+                        </div>
+                        <!-- Algalita-->
+                        <div class="childAlgalita">
+                            <a href="https://algalita.org/" alt="Algalita" target="_blank">
+                                <div class="algalita circle"></div>
+                            </a>
+                        </div>
+
+                        <!-- Surf Rider -->
+                        <div class="childRider">
+                            <a href="https://surfrider.eu/" alt="Surf Rider" target="_blank">
+                                <div class="surfrider circle"></div>
+                            </a>
+                        </div>
+
+
+
+                    </div>
+
+      
         </section>
     </main>
 
@@ -164,5 +165,7 @@
 </div>
 
 <script src="index.js"></script>
+
 </body>
+
 </html>
