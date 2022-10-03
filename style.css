@@ -414,8 +414,12 @@ hr {
 }
 .title2{
     text-align: center;
+    user-select: none; 
 }
 
+/* .title2>p{
+    user-select: none; 
+} */
 .game{
     display: flex;
     justify-content: center;
