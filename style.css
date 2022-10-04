@@ -540,7 +540,42 @@ footer>ul>li {
 }
 /*Fin media queries tablet-vertical/
 
+/* Media queries for little mobile */
 
+/*Media queries tablet vertical*/
+@media screen and (max-width: 700px) {
+
+        .boat_active {
+        animation: moveBoat 10s ease-in-out infinite;
+        height: 105%;
+    }
+
+    /*This keyframe states the area for the animation on the boat*/
+    @keyframes moveBoat {
+        0% {
+            transform: translateX(-250px);
+            /*vh = view height*/
+        }
+
+        33% {
+            transform: translateX(0vw);
+        }
+
+        66% {
+            transform: translateX(30vw);
+        }
+
+        99% {
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateX(100vw);
+            opacity: 0;
+        }
+    }
+    
+}
 
 /*Media queries desktop*/
 @media screen and (min-width: 1024px) {
