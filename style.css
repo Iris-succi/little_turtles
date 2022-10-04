@@ -87,6 +87,15 @@ p {
     color: #eee;
 }
 
+.scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%, -10%);
+    margin: 0 auto;
+    height: 30px;
+}
+
 /*Menu burger*/
 #mySidenav {
     display: none;
