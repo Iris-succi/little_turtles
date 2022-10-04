@@ -241,7 +241,9 @@ header {
 
 /* QUIZZ SECTION */
 
-
+.quizz-elements{
+    height:100vh;
+}
 .headerQuizz {
     text-align: center;
     display: flex;
