@@ -22,7 +22,8 @@
 }
 
 * {
-    box-sizing: border-box;
+     scroll-behavior: smooth;
+     box-sizing: border-box;
     font-family: 'Poppins', Verdana, sans-serif;
 }
 
@@ -239,6 +240,10 @@ header {
 }
 
 /* QUIZZ SECTION */
+
+.quizz-elements{
+    height:100vh;
+}
 .headerQuizz {
     text-align: center;
     display: flex;
@@ -530,11 +535,49 @@ footer>ul>li {
             opacity: 0;
         }
     }
+    
+    .bubble1, .bubble2 {
+        display: none;
+    }
 }
-
 /*Fin media queries tablet-vertical/
 
+/* Media queries for little mobile */
 
+/*Media queries tablet vertical*/
+@media screen and (max-width: 700px) {
+
+        .boat_active {
+        animation: moveBoat 10s ease-in-out infinite;
+        height: 105%;
+    }
+
+    /*This keyframe states the area for the animation on the boat*/
+    @keyframes moveBoat {
+        0% {
+            transform: translateX(-250px);
+            /*vh = view height*/
+        }
+
+        33% {
+            transform: translateX(0vw);
+        }
+
+        66% {
+            transform: translateX(30vw);
+        }
+
+        99% {
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateX(100vw);
+            opacity: 0;
+        }
+    }
+    
+}
 
 /*Media queries desktop*/
 @media screen and (min-width: 1024px) {
@@ -543,7 +586,10 @@ footer>ul>li {
     .background {
         background-image: url(./assets/background/background_desktop.svg);
     }
-
+    main {
+        margin-right: 10vw;
+        margin-left: 10vw;
+    }
     /* MENU */
     #mySidenav {
         display: block;
@@ -592,7 +638,7 @@ footer>ul>li {
     }
 
     .boat_active {
-        height: 100%;
+        height: 108%;
         animation: moveBoat 10s ease-in-out infinite;
     }
 
@@ -626,6 +672,125 @@ footer>ul>li {
         padding-top: 0.5em;
         z-index: 10;
     }
+  
+   
 }
 
 /*Fin media queries desktop*/
+
+
+.bubble1{
+    position: absolute;
+    top: 1370px;
+    left : 5vw;
+    height : 150px;
+    opacity: 0.2;
+}
+
+.bubble2{
+    position: absolute;
+    top: 1290px;
+    left : 5vw; 
+    height : 160px;
+    opacity:0.5;
+}
+
+.bubble3{
+    position: absolute;
+    top: 3000px;
+    right : 5vw;
+    height : 150px;
+    opacity: 0.2;
+}
+
+.bubble4{
+    position: absolute;
+    top: 3090px;
+    right : 5vw; 
+    height : 160px;
+    opacity:0.5;
+}
+
+.bubble5{
+    position: absolute;
+    top: 3200px;
+    right : 5vw;
+    height : 150px;
+    opacity: 0.3;
+}
+
+.bubble6{
+    position: absolute;
+    top: 2100px;
+    right : 80vw;
+    height : 100px;
+    opacity: 0.3;
+}
+.bubble7{
+    position: absolute;
+    top: 2200px;
+    right : 95vw;
+    height : 80px;
+    opacity: 0.2;
+}
+.bubble8{
+    position: absolute;
+    top: 2150px;
+    right : 75vw;
+    height : 70px;
+    opacity: 0.3;
+}
+
+.bubble9{
+    position: absolute;
+    top: 4020px;
+    right : 40vw;
+    height : 90px;
+    opacity: 0.3;
+}
+.bubble10{
+    position: absolute;
+    top: 3500px;
+    right : 30vw;
+    height : 90px;
+    opacity: 0.2;
+}
+.bubble11{
+    position: absolute;
+    top: 5600px;
+    right : 95vw;
+    height : 130px;
+    opacity: 0.2;
+}
+
+.bubble13{
+    position: absolute;
+    top: 5300px;
+    right : 75vw;
+    height : 200px;
+    opacity: 0.3;
+}
+
+.straw1 {
+    position: absolute;
+    top: 1000px;
+    right : 10vw;
+    height : 1500px;
+    opacity: 0.3;
+}
+.straw2 {
+    position: absolute;
+    transform: rotate(190deg);
+    top: 3000px;
+    right : 80vw;
+    height : 1000px;
+    opacity: 0.3;
+}
+.straw3 {
+    position: absolute;
+    transform: rotate(20deg);
+    top: 4000px;
+    left : 20vw;
+    height : 1000px;
+    opacity: 0.3;
+}

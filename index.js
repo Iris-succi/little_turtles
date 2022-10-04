@@ -19,7 +19,6 @@ function closeNav() {
 }
 //Fin menu burger//
 
-
 // 1) Select the HTML section that will contain all quizz elements
 const quizz = document.querySelector("#quizz");
 
@@ -37,7 +36,8 @@ const questions = [
     ],
     validIndex: 2,
 
-    knowMoreText: "Chaque année, ce sont 8 millions de tonnes de plastique qui finissent dans les océans. Ces déchets menacent l'écosystème et sont responsables de la mise en danger (voir de la disparition) de la majorité des espèces marines. Source : Liberation.fr",
+    knowMoreText:
+      "Chaque année, ce sont 8 millions de tonnes de plastique qui finissent dans les océans. Ces déchets menacent l'écosystème et sont responsables de la mise en danger (voir de la disparition) de la majorité des espèces marines. Source : Liberation.fr",
   },
   {
     pictogram: "./assets/waterwings.svg",
@@ -50,15 +50,16 @@ const questions = [
       "Brosse à dent",
     ],
     validIndex: 0,
-    knowMoreText: "Ce sont les pailles qui ne sont plus autorisées à la vente. Toutefois, chacunes des réponses peuvent ête considérées comme correctes car nous devons éviter d'utiliser chacun de ces objets au quotidien. Source : ec.europa.eu - Site de la comission européenne",
+    knowMoreText:
+      "Ce sont les pailles qui ne sont plus autorisées à la vente. Toutefois, chacunes des réponses peuvent ête considérées comme correctes car nous devons éviter d'utiliser chacun de ces objets au quotidien. Source : ec.europa.eu - Site de la comission européenne",
   },
   {
     pictogram: "./assets/waterwings.svg",
     question: "Qu’appelle t-on le 7e continent ?",
     answerOptions: ["Afrique", "Europe", "Asie", "Amat de dechets"],
     validIndex: 3,
-    knowMoreText: "Le 7e continent n'est en réalité pas un vrai continent mais plutôt un aglomérat de déchet qui se trouve dans le Pacifique Nord (entre le Japon et la Californie). Malheureusement, il n'existe pas qu'un seul endroit où les déchets s'agglomèrent... Source : conservation-nature.fr",
-
+    knowMoreText:
+      "Le 7e continent n'est en réalité pas un vrai continent mais plutôt un aglomérat de déchet qui se trouve dans le Pacifique Nord (entre le Japon et la Californie). Malheureusement, il n'existe pas qu'un seul endroit où les déchets s'agglomèrent... Source : conservation-nature.fr",
   },
   {
     pictogram: "./assets/waterwings.svg",
@@ -66,8 +67,8 @@ const questions = [
       "Quelles espèces marines sont en voie de disparition à cause de la pollution des eaux ? ",
     answerOptions: ["Thon rouge", "Requin", "Tortue", "Poisson rouge"],
     validIndex: 2,
-    knowMoreText: "Comme nous l'avons dit précédemment, toutes les espèces marines sont mises en danger par la pollution des eaux. Toutefois, parmi les espèces citées, ce sont les tortues qui en patîssent le plus, mourant régulièrement étouffées par des sacs plastiques. Source : conservation-nature.fr",
-
+    knowMoreText:
+      "Comme nous l'avons dit précédemment, toutes les espèces marines sont mises en danger par la pollution des eaux. Toutefois, parmi les espèces citées, ce sont les tortues qui en patîssent le plus, mourant régulièrement étouffées par des sacs plastiques. Source : conservation-nature.fr",
   },
   {
     pictogram: "./assets/waterwings.svg",
@@ -75,8 +76,8 @@ const questions = [
       "Quel pourcentage des déchets de la mer représentent les mégots et les filtres de cigarette ? ",
     answerOptions: ["10%", "20%", "30%", "40%"],
     validIndex: 3,
-    knowMoreText: "La majorité des gens jetent leurs mégots dans le caniveau. Ainsi, ils représentent quasiment 40% des déchets de la mer. Rien qu'en France, on estime que c'est environ un millier de mégots qui sont jetés chaque SECONDES dans la nature. Source : www.generationsanstabac.org",
-
+    knowMoreText:
+      "La majorité des gens jetent leurs mégots dans le caniveau. Ainsi, ils représentent quasiment 40% des déchets de la mer. Rien qu'en France, on estime que c'est environ un millier de mégots qui sont jetés chaque SECONDES dans la nature. Source : www.generationsanstabac.org",
   },
   {
     pictogram: "./assets/waterwings.svg",
@@ -88,8 +89,8 @@ const questions = [
       "Capsule nespresso",
     ],
     validIndex: 1,
-    knowMoreText: "Lors de la période d'éclosion des tortues, en 2019 sur les côtes de Floride, des bénévoles ont trouvés une petite tortue (assez petite pour tenir dans la paume d'une main) en train de mourir à petit feu, étouffée par plus de 100 morceaux de plastique. Source : www.huffingtonpost.fr",
-
+    knowMoreText:
+      "Lors de la période d'éclosion des tortues, en 2019 sur les côtes de Floride, des bénévoles ont trouvés une petite tortue (assez petite pour tenir dans la paume d'une main) en train de mourir à petit feu, étouffée par plus de 100 morceaux de plastique. Source : www.huffingtonpost.fr",
   },
 ];
 
