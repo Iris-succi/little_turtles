@@ -422,6 +422,7 @@ hr {
     justify-content: center;
 }
 
+
 /* Game */ 
 .gamepart{
     height: 100vh;
@@ -598,6 +599,11 @@ footer>ul>li {
     main {
         margin-right: 10vw;
         margin-left: 10vw;
+    }
+
+    main > hr {
+        margin-left : -5vw;
+        padding: 0;
     }
     /* MENU */
     #mySidenav {
