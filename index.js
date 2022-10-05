@@ -194,6 +194,7 @@ dechet[0] = {
   h: 50,
 };
 let gamePlaying = false;
+let score = 0;
 
 //Function move turtle Up + gravity and create random straw
 
@@ -213,7 +214,7 @@ function draw() {
       ctx.drawImage(straw, dechet[i].x, dechet[i].y);
       dechet[i].x--;
 
-      if (dechet[i].x === 150) {
+      if (dechet[i].x === 200) {
         dechet.push({
           x: canvas.width,
           y: Math.floor(Math.random() * canvas.height),
@@ -229,9 +230,21 @@ function draw() {
         tY + tHeight > dechet[i].y
       ) {
         gamePlaying = false;
+        if (gamePlaying == false) {
+          tX = 20;
+          tY = 260;
+          score = 0;
+        }
+      }
+      if (tY + turtle.height >= canvas.height) {
+        gamePlaying = false;
+      }
+      if (dechet[i].x == 5) {
+        score++;
       }
     }
     tY += gravity;
+    ctx.fillText("Score : " + score, 200, 20);
   } else {
     ctx.fillText(`Cliquez pour jouer`, 50, 200);
     ctx.font = "20px Courier";
