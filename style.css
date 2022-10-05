@@ -423,6 +423,11 @@ div.buttonQuizz {
     background-position: center;
 }
 
+.responsiveImg {
+    height: 100px;
+    width: auto;
+}
+
 /* HR */
 hr {
     width: 80vw;
