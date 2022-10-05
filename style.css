@@ -360,7 +360,7 @@ div.buttonQuizz {
 }
 
 #association {
-    height: 90vh;
+    min-height: 90vh;
 }
 
 .childBloom {
@@ -442,7 +442,7 @@ hr {
 
 /* Game */
 .gamepart {
-    height: 90vh;
+    min-height: 90vh;
 }
 
 .title2 {
@@ -482,11 +482,6 @@ h3 {
     padding-bottom: 1.5vh;
     color: var(--importantElementColor);
     font-size: 1.5rem;
-}
-
-#addPad {
-    padding-bottom: 5vh;
-    padding-top: 4vh;
 }
 
 footer>ul {
@@ -736,7 +731,7 @@ footer>ul>li {
         grid-gap: 0;
         justify-items: center;
         margin: 2rem;
-        margin-bottom: 5rem;
+        margin-bottom: 2rem;
     }
 
     .circle {
