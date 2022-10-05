@@ -755,11 +755,10 @@ footer>ul>li {
 
 
 
-.bubble1 {
+
 /* Background Z-index */
 
 .bubble1{
-
     position: absolute;
     top: 1370px;
     left: 5vw;
