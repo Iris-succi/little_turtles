@@ -317,9 +317,19 @@ div.buttonQuizz {
 .explanation {
     display: none;
     margin-top: 2vw;
-    padding-top: 2vw;
-    padding-bottom: 2vw;
+    padding: 2vw;
     font-size: 1.2em;
+    text-align: justify;
+    animation: appears .5s ease-in-out;
+}
+
+@keyframes appears {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .stopClick {
