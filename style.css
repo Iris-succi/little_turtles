@@ -253,7 +253,7 @@ header {
 /* QUIZZ SECTION */
 
 .quizz-elements {
-    height: auto;
+    min-height: 100vh;
     z-index: 99;
 }
 
