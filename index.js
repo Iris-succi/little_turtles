@@ -42,24 +42,24 @@ const questions = [
   {
     pictogram: "./assets/waterwings.svg",
     question:
-      "Selon la législation de la commission européenne, quels produits à usages uniques ne sont plus autorisés à la vente ?",
+      "Quels produits à usage unique ne sont plus autorisés à la vente ?",
     answerOptions: [
       "Paille",
-      "Couverts plastiques",
-      "Sac Plastique",
+      "Couverts plastique",
+      "Sac plastique",
       "Brosse à dent",
     ],
     validIndex: 0,
     knowMoreText:
-      "Ce sont les pailles qui ne sont plus autorisées à la vente. Toutefois, chacunes des réponses peuvent ête considérées comme correctes car nous devons éviter d'utiliser chacun de ces objets au quotidien. Source : ec.europa.eu - Site de la comission européenne",
+      "Ce sont les pailles qui ne sont plus autorisées à la vente. Toutefois, chacune des réponses peuvent être considérées comme correctes car nous devons éviter d'utiliser chacun de ces objets au quotidien. Source : ec.europa.eu - Site de la comission européenne",
   },
   {
     pictogram: "./assets/waterwings.svg",
     question: "Qu’appelle t-on le 7e continent ?",
-    answerOptions: ["Afrique", "Europe", "Asie", "Amat de dechets"],
+    answerOptions: ["Afrique", "Europe", "Asie", "Amat de déchets"],
     validIndex: 3,
     knowMoreText:
-      "Le 7e continent n'est en réalité pas un vrai continent mais plutôt un aglomérat de déchet qui se trouve dans le Pacifique Nord (entre le Japon et la Californie). Malheureusement, il n'existe pas qu'un seul endroit où les déchets s'agglomèrent... Source : conservation-nature.fr",
+      "Le 7e continent n'est en réalité pas un vrai continent mais plutôt un agglomérat de déchets qui se trouve dans le Pacifique Nord (entre le Japon et la Californie). Malheureusement, il n'existe pas qu'un seul endroit où les déchets s'agglomèrent... Source : conservation-nature.fr",
   },
   {
     pictogram: "./assets/waterwings.svg",
@@ -73,24 +73,24 @@ const questions = [
   {
     pictogram: "./assets/waterwings.svg",
     question:
-      "Quel pourcentage des déchets de la mer représentent les mégots et les filtres de cigarette ? ",
+      "Quel pourcentage des déchets en mer représentent les mégots et les filtres de cigarette ? ",
     answerOptions: ["10%", "20%", "30%", "40%"],
     validIndex: 3,
     knowMoreText:
-      "La majorité des gens jetent leurs mégots dans le caniveau. Ainsi, ils représentent quasiment 40% des déchets de la mer. Rien qu'en France, on estime que c'est environ un millier de mégots qui sont jetés chaque SECONDES dans la nature. Source : www.generationsanstabac.org",
+      "La majorité des gens jetent leurs mégots dans le caniveau. Ainsi, ils représentent quasiment 40% des déchets trouvés dans la mer. Rien qu'en France, on estime que c'est environ un millier de mégots qui sont jetés chaque SECONDE dans la nature. Source : www.generationsanstabac.org",
   },
   {
     pictogram: "./assets/waterwings.svg",
-    question: "Qu’à t-on retrouvé dans le corps d’un bébé tortue en 2019 ?",
+    question: "Qu’a-t-on retrouvé dans le corps d’un bébé tortue en 2019 ?",
     answerOptions: [
       "Une brosse a dent",
       "100 morceaux de plastique",
       "25 mégots de cigarette",
-      "Capsule nespresso",
+      "Capsule Nespresso",
     ],
     validIndex: 1,
     knowMoreText:
-      "Lors de la période d'éclosion des tortues, en 2019 sur les côtes de Floride, des bénévoles ont trouvés une petite tortue (assez petite pour tenir dans la paume d'une main) en train de mourir à petit feu, étouffée par plus de 100 morceaux de plastique. Source : www.huffingtonpost.fr",
+      "Lors de la période d'éclosion des tortues, en 2019 sur les côtes de Floride, des bénévoles ont trouvé une petite tortue (assez petite pour tenir dans la paume d'une main) en train de mourir à petit feu, étouffée par plus de 100 morceaux de plastique. Source : www.huffingtonpost.fr",
   },
 ];
 
