@@ -168,7 +168,6 @@ for (let i = 0; i < questions.length; i++) {
 
 // 5) Creation of next Button
 
-
 //GAME PART !!
 
 //create canvas + contex
