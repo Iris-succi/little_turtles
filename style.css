@@ -22,8 +22,8 @@
 }
 
 * {
-     scroll-behavior: smooth;
-     box-sizing: border-box;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
     font-family: 'Poppins', Verdana, sans-serif;
 }
 
@@ -112,7 +112,7 @@ p {
     /* On l'utilise en position fixed et définit où sera mon élément dans ma fenêtre. Top 0 = tout en haut */
     background-color: #2F557D;
     padding-top: 60px;
-    transition: right 0.3s ease;
+    transition: right 0.8s ease;
     /* left est la propriété  qui, quand on fera l'action (cf sidenav.active) prendra 0.5s à passer de 180px à 0. ease c'est un genre de transition (ça s'ouvre en joli) */
     right: -220px;
     display: flex;
@@ -250,10 +250,11 @@ header {
 
 /* QUIZZ SECTION */
 
-.quizz-elements{
-    height:100vh;
+.quizz-elements {
+    height: 100vh;
     z-index: 99;
 }
+
 .headerQuizz {
     text-align: center;
     display: flex;
@@ -348,6 +349,10 @@ div.buttonQuizz {
 
 }
 
+#association {
+    height: 90vh;
+}
+
 .childBloom {
     grid-area: 1 / 1 / 2 / 2;
 
@@ -425,25 +430,26 @@ hr {
 }
 
 
-/* Game */ 
-.gamepart{
-    height: 100vh;
+/* Game */
+.gamepart {
+    height: 90vh;
 }
-.title2{
+
+.title2 {
     text-align: center;
-    user-select: none; 
+    user-select: none;
 }
 
 /* .title2>p{
     user-select: none; 
 } */
-.game{
+.game {
     display: flex;
     justify-content: center;
     padding-top: 50px;
 }
 
-.tortuegame{
+.tortuegame {
     border: 1px solid #eee;
 }
 
@@ -462,9 +468,15 @@ ul {
 }
 
 h3 {
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+    padding-top: 3.8vh;
+    padding-bottom: 1.5vh;
     color: var(--importantElementColor);
+    font-size: 1.5rem;
+}
+
+#addPad {
+    padding-bottom: 5vh;
+    padding-top: 4vh;
 }
 
 footer>ul {
@@ -547,11 +559,13 @@ footer>ul>li {
             opacity: 0;
         }
     }
-    
-    .bubble1, .bubble2 {
+
+    .bubble1,
+    .bubble2 {
         display: none;
     }
 }
+
 /*Fin media queries tablet-vertical/
 
 /* Media queries for little mobile */
@@ -559,7 +573,7 @@ footer>ul>li {
 /*Media queries tablet vertical*/
 @media screen and (max-width: 700px) {
 
-        .boat_active {
+    .boat_active {
         animation: moveBoat 10s ease-in-out infinite;
         height: 105%;
     }
@@ -588,7 +602,7 @@ footer>ul>li {
             opacity: 0;
         }
     }
-    
+
 }
 
 /*Media queries desktop*/
@@ -598,15 +612,17 @@ footer>ul>li {
     .background {
         background-image: url(./assets/background/background_desktop.svg);
     }
+
     main {
         margin-right: 10vw;
         margin-left: 10vw;
     }
 
-    main > hr {
-        margin-left : -5vw;
+    main>hr {
+        margin-left: -5vw;
         padding: 0;
     }
+
     /* MENU */
     #mySidenav {
         display: block;
@@ -619,6 +635,7 @@ footer>ul>li {
         flex-direction: row;
         left: 0px;
         right: 0px;
+        background: none;
     }
 
     .sidenav a {
@@ -632,7 +649,7 @@ footer>ul>li {
         display: flex;
         align-items: flex-start;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: flex-end;
     }
 
 
@@ -689,140 +706,178 @@ footer>ul>li {
         padding-top: 0.5em;
         z-index: 10;
     }
-  
-   
+
+    h3 {
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+        color: var(--importantElementColor);
+        font-size: 2em;
+    }
+
+    .thanks {
+        text-align: center;
+        margin-bottom: 1vh;
+    }
+
+    .associationParent {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 0;
+        justify-items: center;
+        margin: 2rem;
+        margin-bottom: 5rem;
+    }
+
+    .circle {
+        height: 15vh;
+        width: 15vh;
+    }
+
+    p {
+        font-size: 1.4em;
+    }
+
+
 }
 
 /*Fin media queries desktop*/
 
 
-.bubble1{
+.bubble1 {
     position: absolute;
     top: 1370px;
-    left : 5vw;
-    height : 150px;
+    left: 5vw;
+    height: 150px;
     opacity: 0.2;
 }
 
-.bubble2{
+.bubble2 {
     position: absolute;
     top: 1290px;
-    left : 5vw; 
-    height : 160px;
-    opacity:0.5;
-    
+    left: 5vw;
+    height: 160px;
+    opacity: 0.5;
+
 }
 
-.bubble3{
+.bubble3 {
     position: absolute;
     top: 3000px;
-    right : 5vw;
-    height : 150px;
+    right: 5vw;
+    height: 150px;
     opacity: 0.2;
-   
+
 }
 
-.bubble4{
+.bubble4 {
     position: absolute;
     top: 3090px;
-    right : 5vw; 
-    height : 160px;
-    opacity:0.5;
-    
+    right: 5vw;
+    height: 160px;
+    opacity: 0.5;
+
 }
 
-.bubble5{
+.bubble5 {
     position: absolute;
     top: 3200px;
-    right : 5vw;
-    height : 150px;
+    right: 5vw;
+    height: 150px;
     opacity: 0.3;
 }
 
-.bubble6{
+.bubble6 {
     position: absolute;
     top: 2100px;
-    right : 80vw;
-    height : 100px;
+    right: 80vw;
+    height: 100px;
     opacity: 0.3;
 }
-.bubble7{
+
+.bubble7 {
     position: absolute;
     top: 2200px;
-    right : 95vw;
-    height : 80px;
+    right: 95vw;
+    height: 80px;
     opacity: 0.2;
 }
-.bubble8{
+
+.bubble8 {
     position: absolute;
     top: 2150px;
-    right : 75vw;
-    height : 70px;
+    right: 75vw;
+    height: 70px;
     opacity: 0.3;
 }
 
-.bubble9{
+.bubble9 {
     position: absolute;
     top: 4020px;
-    right : 40vw;
-    height : 90px;
+    right: 40vw;
+    height: 90px;
     opacity: 0.3;
 }
-.bubble10{
+
+.bubble10 {
     position: absolute;
     top: 3500px;
-    right : 30vw;
-    height : 90px;
-    opacity: 0.2;
-}
-.bubble11{
-    position: absolute;
-    top: 5600px;
-    right : 95vw;
-    height : 130px;
+    right: 30vw;
+    height: 90px;
     opacity: 0.2;
 }
 
-.bubble13{
+.bubble11 {
+    position: absolute;
+    top: 5600px;
+    right: 95vw;
+    height: 130px;
+    opacity: 0.2;
+}
+
+.bubble13 {
     position: absolute;
     top: 5300px;
-    right : 75vw;
-    height : 200px;
+    right: 75vw;
+    height: 200px;
     opacity: 0.3;
 }
 
 .straw1 {
     position: absolute;
     top: 1000px;
-    right : 10vw;
-    height : 1500px;
+    right: 10vw;
+    height: 1500px;
     opacity: 0.3;
 }
+
 .straw2 {
     position: absolute;
     transform: rotate(190deg);
     top: 3000px;
-    right : 80vw;
-    height : 1000px;
+    right: 80vw;
+    height: 1000px;
     opacity: 0.3;
 }
+
 .straw3 {
     position: absolute;
     transform: rotate(20deg);
     top: 4000px;
-    left : 20vw;
-    height : 1000px;
+    left: 20vw;
+    height: 1000px;
     opacity: 0.3;
 }
 
 #quizz {
-    position: relative;;
+    position: relative;
+    ;
 }
 
 .background-elements {
-    z-index : 0;
+    z-index: 0;
 }
 
-.answer{
-    z-index : 99;
+.answer {
+    z-index: 99;
 }
