@@ -469,6 +469,43 @@ footer {
     padding-bottom: 5vh;
 }
 
+
+.madeline {
+    height : 13vh;
+    width: 9vh;
+    background-image: url(./assets/people/Madeline.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.chloe{
+    height : 13vh;
+    width: 13vh;
+    background-image: url(./assets/people/Chloe.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.iris{
+    height : 13vh;
+    width: 9vh;
+    background-image: url(./assets/people/Iris.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.marion{ 
+    height : 13vh;
+    width: 13vh;
+    background-image: url(./assets/people/Marion.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 h3,
 .wildersPresentation,
 ul {
