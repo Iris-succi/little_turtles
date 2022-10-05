@@ -653,6 +653,17 @@ footer>ul>li {
     .bubble2 {
         display: none;
     }
+
+    /* FOOTER */
+
+    footer>ul {
+        margin: 0 auto;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
 
 /*Fin media queries tablet-horizontale/
@@ -791,6 +802,17 @@ footer>ul>li {
 
     p {
         font-size: 1.4em;
+    }
+
+    /* FOOTER */
+
+    footer>ul {
+        margin: 0 auto;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
 
 
