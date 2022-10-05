@@ -59,7 +59,7 @@ body {
 }
 
 .logo {
-    padding-left: 1em;
+    padding-left: 1.2em;
     padding-top: 0.5em;
 }
 
@@ -83,6 +83,7 @@ h1 {
 
 p {
     width: 90%;
+    padding: 2vh;
     margin: 0 auto;
     color: #eee;
 }
@@ -201,8 +202,8 @@ header {
 .background,
 .foreground {
     position: absolute;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     object-fit: cover;
 }
 
@@ -221,6 +222,7 @@ header {
 /* This allows us to make the boat move up and down infinitely. One up and down move takes 5seconds*/
 .boat_active {
     animation: moveBoat 10s ease-in-out infinite;
+    height: 108%;
 }
 
 /*This keyframe states the area for the animation on the boat*/
@@ -251,7 +253,7 @@ header {
 /* QUIZZ SECTION */
 
 .quizz-elements {
-    height: 100vh;
+    height: auto;
     z-index: 99;
 }
 
@@ -279,7 +281,7 @@ header {
     border-radius: 12px;
     height: 10vh;
     width: auto;
-    font-size: 1.2em;
+    font-size: 1rem;
     box-shadow: -0.8px 2px 1px 0.5px rgb(245, 185, 95);
 }
 
@@ -328,6 +330,7 @@ div.buttonQuizz {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -471,7 +474,7 @@ footer {
 
 
 .madeline {
-    height : 13vh;
+    height: 13vh;
     width: 9vh;
     background-image: url(./assets/people/Madeline.png);
     background-repeat: no-repeat;
@@ -479,8 +482,9 @@ footer {
     background-position: center;
 
 }
-.chloe{
-    height : 13vh;
+
+.chloe {
+    height: 13vh;
     width: 13vh;
     background-image: url(./assets/people/Chloe.png);
     background-repeat: no-repeat;
@@ -488,8 +492,9 @@ footer {
     background-position: center;
 
 }
-.iris{
-    height : 13vh;
+
+.iris {
+    height: 13vh;
     width: 9vh;
     background-image: url(./assets/people/Iris.png);
     background-repeat: no-repeat;
@@ -497,8 +502,9 @@ footer {
     background-position: center;
 
 }
-.marion{ 
-    height : 13vh;
+
+.marion {
+    height: 13vh;
     width: 13vh;
     background-image: url(./assets/people/Marion.png);
     background-repeat: no-repeat;
@@ -563,18 +569,59 @@ footer>ul>li {
 }
 
 /*Media queries tablet vertical*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 500px) {
 
     /* HEADER */
     .background {
         background-image: url(./assets/background/background_tablet.svg);
     }
 
+    .boat_active {
+        animation: moveBoat 10s ease-in-out infinite;
+        height: 108%;
+    }
+
+    /*This keyframe states the area for the animation on the boat*/
+    @keyframes moveBoat {
+        0% {
+            transform: translateX(-250px);
+            /*vh = view height*/
+        }
+
+        33% {
+            transform: translateX(0vw);
+        }
+
+        66% {
+            transform: translateX(30vw);
+        }
+
+        99% {
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateX(100vw);
+            opacity: 0;
+        }
+    }
+
+}
+
+
+/*Media queries tablet horizontale*/
+@media screen and (min-width: 768px) {
+
+    /* HEADER */
+    .background {
+        background-image: url(./assets/background/background_tablet_horizontal.svg);
+    }
+
 
     /* This allows us to make the boat move up and down infinitely. One up and down move takes 5seconds*/
     .boat_active {
         animation: moveBoat 10s ease-in-out infinite;
-        height: 100%;
+        height: 108%;
     }
 
     /*This keyframe states the area for the animation on the boat*/
@@ -608,44 +655,10 @@ footer>ul>li {
     }
 }
 
-/*Fin media queries tablet-vertical/
+/*Fin media queries tablet-horizontale/
 
 /* Media queries for little mobile */
 
-/*Media queries tablet vertical*/
-@media screen and (max-width: 700px) {
-
-    .boat_active {
-        animation: moveBoat 10s ease-in-out infinite;
-        height: 105%;
-    }
-
-    /*This keyframe states the area for the animation on the boat*/
-    @keyframes moveBoat {
-        0% {
-            transform: translateX(-250px);
-            /*vh = view height*/
-        }
-
-        33% {
-            transform: translateX(0vw);
-        }
-
-        66% {
-            transform: translateX(30vw);
-        }
-
-        99% {
-            opacity: 1;
-        }
-
-        100% {
-            transform: translateX(100vw);
-            opacity: 0;
-        }
-    }
-
-}
 
 /*Media queries desktop*/
 @media screen and (min-width: 1024px) {
@@ -744,7 +757,7 @@ footer>ul>li {
     }
 
     .logo {
-        padding-left: 1em;
+        padding-left: 1.5em;
         padding-top: 0.5em;
         z-index: 10;
     }
@@ -790,7 +803,7 @@ footer>ul>li {
 
 /* Background Z-index */
 
-.bubble1{
+.bubble1 {
     position: absolute;
     top: 1370px;
     left: 5vw;
