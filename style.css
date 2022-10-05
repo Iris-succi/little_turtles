@@ -90,8 +90,8 @@ p {
 .scroll {
     position: absolute;
     left: 50%;
-    bottom: 20px;
-    transform: translate(-50%, -10%);
+    bottom: 10vh;
+    transform: translate(-50%, -50%);
     margin: 0 auto;
     height: 30px;
 }
@@ -695,6 +695,8 @@ footer>ul>li {
 
 /*Fin media queries desktop*/
 
+
+/* Background Z-index */
 
 .bubble1{
     position: absolute;
