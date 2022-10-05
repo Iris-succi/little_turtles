@@ -252,6 +252,7 @@ header {
 
 .quizz-elements{
     height:100vh;
+    z-index: 99;
 }
 .headerQuizz {
     text-align: center;
@@ -326,6 +327,7 @@ div.buttonQuizz {
 }
 
 /* SECTION ASSOCIATION */
+
 
 .association>p {
     color: var(--mainTextColor);
@@ -708,6 +710,7 @@ footer>ul>li {
     left : 5vw; 
     height : 160px;
     opacity:0.5;
+    
 }
 
 .bubble3{
@@ -716,6 +719,7 @@ footer>ul>li {
     right : 5vw;
     height : 150px;
     opacity: 0.2;
+   
 }
 
 .bubble4{
@@ -724,6 +728,7 @@ footer>ul>li {
     right : 5vw; 
     height : 160px;
     opacity:0.5;
+    
 }
 
 .bubble5{
@@ -808,4 +813,16 @@ footer>ul>li {
     left : 20vw;
     height : 1000px;
     opacity: 0.3;
+}
+
+#quizz {
+    position: relative;;
+}
+
+.background-elements {
+    z-index : 0;
+}
+
+.answer{
+    z-index : 99;
 }

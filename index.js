@@ -166,6 +166,9 @@ for (let i = 0; i < questions.length; i++) {
   createQuizzElements(questions[i]);
 }
 
+// 5) Creation of next Button
+
+
 //GAME PART !!
 
 //create canvas + contex
