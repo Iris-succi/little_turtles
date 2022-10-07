@@ -234,7 +234,7 @@ function draw() {
         gamePlaying = false;
         if (gamePlaying == false) {
           tX = 20;
-          tY = 260;
+          tY = -40;
           score = 0;
         }
       }
