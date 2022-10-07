@@ -29,8 +29,10 @@ Footer -> Credits - Thanks
 👩🏻 Marion
   
    
-🖋 Special thanks : our graphists Miguel and Vincent !
-             ___
+🖋 Special thanks : our graphists Miguel and Vincent ! 
+            
+            
+ --
           ,+'/.\'+,    ___
         \/\_/\_/\_/\,+' * \
        /_/'-------'\_\              Madeline, Chloé, Iris, Marion 
