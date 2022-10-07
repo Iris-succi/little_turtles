@@ -18,7 +18,7 @@ Burger Menu - mixed CSS and JS to make the main page minimalist
 Header -> Title - Logo - Menu Burger
 MainContent -> Quizz
 Other -> Presentation of associations
-Game 🕹️
+-> Game 🕹️
 Footer -> Credits - Thanks
 
 💻 Credits :
